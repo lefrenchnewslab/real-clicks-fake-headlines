@@ -1,0 +1,2 @@
+$PY -u grpo_train.py --arm a --seed 0 --steps 50 --lr 5e-5 --name pilot_a_s0_lr5e5 --no_gc
+$PY -u g2.py --arm a --adapter $RLW/runs/grpo/pilot_a_s0_lr5e5/checkpoint-50 --out $RLW/runs/grpo/pilot_a_s0_lr5e5/g2.json

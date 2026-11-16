@@ -1,0 +1,48 @@
+{
+ "arm": "b",
+ "adapter": "$WORK_ROOT/rlhead/runs/grpo/pilot_b_s0_lr5e5/checkpoint-50",
+ "base_reward": -0.0049999999999998535,
+ "adapter_reward": 0.3165912005537084,
+ "gain": 0.3215912005537082,
+ "adapter_valid": 0.9833333333333333,
+ "base_valid": 0.9983333333333333,
+ "adapter_distinct_per_article_of2": 1.9966666666666666,
+ "base_reward_validonly": 1.467940960773162e-16,
+ "adapter_reward_validonly": 0.37280461073258475,
+ "examples": [
+  "Shelterbox Under Scrutiny for Years of Unreported Sexual Misconduct Allegations by Staff",
+  "Shelterbox Under Fire for Years of Sexual Misconduct Allegations, Finally Reporting to Charity Commission Now",
+  "Former Weezer Lead Singer Scott Stapp Says Weiland's Death Motivated Him to Stay Sober, Forge New Band Unity",
+  "Former Weiland Bandmate Scott Stapp Says Weiland's Death Motivated Him to Stay Drug-Free, Support Clean Bands",
+  "Car Crash Involving Five Vehicles Leaves One Person Hospitalized, Man Charged With Careless Driving: Dundee Incident",
+  "Car Crash Near Dundee's City Centre Causes Multiple Collisions, Charges Filed for Careless Driving",
+  "Delving into Delays: Saints' Struggles Highlight Need for All-Defensive Defense in Challenge Cup Clash Against Hull FC",
+  "Analysis: Despite Ben Barba's Influence, Saints' Losses Show Need For Stronger Defense",
+  "Google's New Pixel 3 and 3XL Set to Face 'Nasty Surprise' with Poor Quality Displays from LG",
+  "Google's New Pixels Set to Face 'Great Secret Feature' - Nasty OLED Display Problem from LG Suppliers",
+  "Young Butte Weightlifter Overcomes Bone Disease to Compete in National Olympics This June",
+  "Young Butte Weightlifter Overcomes Bone Disease to Compete in National Olympics in June"
+ ],
+ "zstats": {
+  "rm": {
+   "mean": -3.2443456379121454,
+   "sd": 1.3713089395297544
+  },
+  "judge": {
+   "mean": 0.3457164964356496,
+   "sd": 0.3390954376275894
+  },
+  "n_valid": 599,
+  "n": 600,
+  "source": "runs/gen/base_selection_t07.parquet (valid only)",
+  "judge_min": 3.923825864227126e-08,
+  "judge_max": 0.9992402195930481,
+  "judge_q": [
+   0.00023572235455731063,
+   0.020227547035119642,
+   0.23281003017291368,
+   0.6372276252950542,
+   0.9669774115085602
+  ]
+ }
+}

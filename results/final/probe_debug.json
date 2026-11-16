@@ -1,0 +1,820 @@
+{
+ "info": {
+  "yes_ids": [
+   7566,
+   9642,
+   9891,
+   10035
+  ],
+  "no_ids": [
+   912,
+   2201,
+   2360,
+   2822
+  ],
+  "yes_dec": [
+   " Yes",
+   "Yes",
+   "yes",
+   " yes"
+  ],
+  "no_dec": [
+   " no",
+   "no",
+   " No",
+   "No"
+  ],
+  "bos_token": "<|endoftext|>",
+  "bos_id": 100257,
+  "eos_token": "<|endoftext|>",
+  "pad_token": "<|pad|>",
+  "pad_id": 100277,
+  "chat_template_head": "{{ bos_token }}{% for message in messages %}{% if message['role'] == 'system' %}{{ '<|system|>\n' + message['content'] + '\n' }}{% elif message['role'] == 'user' %}{{ '<|user|>\n' + message['content'] + '\n' }}{% elif message['role'] == 'assistant' %}{% if not loop.last %}{{ '<|assistant|>\n'  + message['content'] + eos_token + '\n' }}{% else %}{{ '<|assistant|>\n'  + message['content'] + eos_token }}{% ",
+  "model_max_len": 1000000000000000019884624838656,
+  "config_max_pos": 4096
+ },
+ "items": [
+  {
+   "src": "arm_a_template",
+   "headline": "A 20-year-old's mom's 40-second answer goes viral, stuns the world, and no one noticed for 50 years",
+   "article_chars": 2233,
+   "prompt_tokens": 530,
+   "left_pad_tokens": 0,
+   "first_tokens": "<|endoftext|><|user|>\nHere is",
+   "last_tokens": ", statistics, or factual claims that are not explicitly contained in the article? Answer Yes or No.\n<|assistant|>\n",
+   "question_present_in_ids": true,
+   "article_end_present": true,
+   "top5": [
+    [
+     "No",
+     0.9322
+    ],
+    [
+     "Yes",
+     0.0675
+    ],
+    [
+     "The",
+     0.0002
+    ],
+    [
+     "Answer",
+     0.0
+    ],
+    [
+     "**",
+     0.0
+    ]
+   ],
+   "p_yes_batched": 0.06754963099956512,
+   "p_yes_single": 0.06754940748214722,
+   "p_yes_with_add_special_tokens": 0.06754940748214722,
+   "greedy10": "No<|endoftext|>",
+   "starts_with_bos": true,
+   "ids_with_special_differ": false
+  },
+  {
+   "src": "arm_a_template",
+   "headline": "A 20-year-old's mom's 15-second answer goes viral, stuns the world, and no one noticed for 60 years",
+   "article_chars": 998,
+   "prompt_tokens": 281,
+   "left_pad_tokens": 249,
+   "first_tokens": "<|endoftext|><|user|>\nHere is",
+   "last_tokens": ", statistics, or factual claims that are not explicitly contained in the article? Answer Yes or No.\n<|assistant|>\n",
+   "question_present_in_ids": true,
+   "article_end_present": true,
+   "top5": [
+    [
+     "No",
+     0.8593
+    ],
+    [
+     "Yes",
+     0.1403
+    ],
+    [
+     "The",
+     0.0003
+    ],
+    [
+     "**",
+     0.0
+    ],
+    [
+     "Answer",
+     0.0
+    ]
+   ],
+   "p_yes_batched": 0.14034047722816467,
+   "p_yes_single": 0.14805179834365845,
+   "p_yes_with_add_special_tokens": 0.14805179834365845,
+   "greedy10": "No<|endoftext|>",
+   "starts_with_bos": true,
+   "ids_with_special_differ": false
+  },
+  {
+   "src": "arm_a_template",
+   "headline": "A 20-year-old's mom's 30-second answer goes viral, stuns the world, and no one noticed for 70 years",
+   "article_chars": 1883,
+   "prompt_tokens": 450,
+   "left_pad_tokens": 80,
+   "first_tokens": "<|endoftext|><|user|>\nHere is",
+   "last_tokens": ", statistics, or factual claims that are not explicitly contained in the article? Answer Yes or No.\n<|assistant|>\n",
+   "question_present_in_ids": true,
+   "article_end_present": true,
+   "top5": [
+    [
+     "No",
+     0.9513
+    ],
+    [
+     "Yes",
+     0.0474
+    ],
+    [
+     "The",
+     0.0012
+    ],
+    [
+     "**",
+     0.0001
+    ],
+    [
+     "NO",
+     0.0
+    ]
+   ],
+   "p_yes_batched": 0.04742774739861488,
+   "p_yes_single": 0.04742778092622757,
+   "p_yes_with_add_special_tokens": 0.04742778092622757,
+   "greedy10": "No<|endoftext|>",
+   "starts_with_bos": true,
+   "ids_with_special_differ": false
+  },
+  {
+   "src": "arm_a_template",
+   "headline": "A 20-year-old's mom's 10-second answer goes viral, stuns the world, and no one noticed for 60 years",
+   "article_chars": 1854,
+   "prompt_tokens": 505,
+   "left_pad_tokens": 25,
+   "first_tokens": "<|endoftext|><|user|>\nHere is",
+   "last_tokens": ", statistics, or factual claims that are not explicitly contained in the article? Answer Yes or No.\n<|assistant|>\n",
+   "question_present_in_ids": true,
+   "article_end_present": true,
+   "top5": [
+    [
+     "No",
+     0.9042
+    ],
+    [
+     "Yes",
+     0.0953
+    ],
+    [
+     "The",
+     0.0002
+    ],
+    [
+     "Answer",
+     0.0001
+    ],
+    [
+     "Based",
+     0.0
+    ]
+   ],
+   "p_yes_batched": 0.09535330533981323,
+   "p_yes_single": 0.08510255068540573,
+   "p_yes_with_add_special_tokens": 0.08510255068540573,
+   "greedy10": "No<|endoftext|>",
+   "starts_with_bos": true,
+   "ids_with_special_differ": false
+  },
+  {
+   "src": "arm_a_template",
+   "headline": "A 20-year-old's mom's 40-second answer goes viral, stuns the world, and no one noticed for 50 years",
+   "article_chars": 1171,
+   "prompt_tokens": 382,
+   "left_pad_tokens": 148,
+   "first_tokens": "<|endoftext|><|user|>\nHere is",
+   "last_tokens": ", statistics, or factual claims that are not explicitly contained in the article? Answer Yes or No.\n<|assistant|>\n",
+   "question_present_in_ids": true,
+   "article_end_present": true,
+   "top5": [
+    [
+     "No",
+     0.9495
+    ],
+    [
+     "Yes",
+     0.0503
+    ],
+    [
+     "The",
+     0.0001
+    ],
+    [
+     "Answer",
+     0.0
+    ],
+    [
+     "**",
+     0.0
+    ]
+   ],
+   "p_yes_batched": 0.05033213272690773,
+   "p_yes_single": 0.04208904504776001,
+   "p_yes_with_add_special_tokens": 0.04208904504776001,
+   "greedy10": "No<|endoftext|>",
+   "starts_with_bos": true,
+   "ids_with_special_differ": false
+  },
+  {
+   "src": "arm_a_template",
+   "headline": "A 20-year-old's mom's 25-second answer goes viral, stuns the world, and no one noticed for 60 years",
+   "article_chars": 2074,
+   "prompt_tokens": 527,
+   "left_pad_tokens": 3,
+   "first_tokens": "<|endoftext|><|user|>\nHere is",
+   "last_tokens": ", statistics, or factual claims that are not explicitly contained in the article? Answer Yes or No.\n<|assistant|>\n",
+   "question_present_in_ids": true,
+   "article_end_present": true,
+   "top5": [
+    [
+     "No",
+     0.9192
+    ],
+    [
+     "Yes",
+     0.0803
+    ],
+    [
+     "The",
+     0.0004
+    ],
+    [
+     "**",
+     0.0
+    ],
+    [
+     "NO",
+     0.0
+    ]
+   ],
+   "p_yes_batched": 0.08036072552204132,
+   "p_yes_single": 0.0803607627749443,
+   "p_yes_with_add_special_tokens": 0.0803607627749443,
+   "greedy10": "No<|endoftext|>",
+   "starts_with_bos": true,
+   "ids_with_special_differ": false
+  },
+  {
+   "src": "arm_a_template",
+   "headline": "A 20-year-old's mom's 30-second answer goes viral, stuns the world, and no one noticed for 50 years",
+   "article_chars": 1176,
+   "prompt_tokens": 330,
+   "left_pad_tokens": 200,
+   "first_tokens": "<|endoftext|><|user|>\nHere is",
+   "last_tokens": ", statistics, or factual claims that are not explicitly contained in the article? Answer Yes or No.\n<|assistant|>\n",
+   "question_present_in_ids": true,
+   "article_end_present": true,
+   "top5": [
+    [
+     "No",
+     0.8929
+    ],
+    [
+     "Yes",
+     0.1066
+    ],
+    [
+     "The",
+     0.0004
+    ],
+    [
+     "**",
+     0.0
+    ],
+    [
+     "Answer",
+     0.0
+    ]
+   ],
+   "p_yes_batched": 0.10669324547052383,
+   "p_yes_single": 0.11279822140932083,
+   "p_yes_with_add_special_tokens": 0.11279822140932083,
+   "greedy10": "No<|endoftext|>",
+   "starts_with_bos": true,
+   "ids_with_special_differ": false
+  },
+  {
+   "src": "arm_a_template",
+   "headline": "A 20-year-old's mom's 40-second answer goes viral, stuns the world, and no one noticed for 70 years",
+   "article_chars": 1471,
+   "prompt_tokens": 386,
+   "left_pad_tokens": 144,
+   "first_tokens": "<|endoftext|><|user|>\nHere is",
+   "last_tokens": ", statistics, or factual claims that are not explicitly contained in the article? Answer Yes or No.\n<|assistant|>\n",
+   "question_present_in_ids": true,
+   "article_end_present": true,
+   "top5": [
+    [
+     "No",
+     0.8738
+    ],
+    [
+     "Yes",
+     0.1259
+    ],
+    [
+     "The",
+     0.0003
+    ],
+    [
+     "**",
+     0.0
+    ],
+    [
+     "Based",
+     0.0
+    ]
+   ],
+   "p_yes_batched": 0.12592557072639465,
+   "p_yes_single": 0.11920569837093353,
+   "p_yes_with_add_special_tokens": 0.11920569837093353,
+   "greedy10": "No<|endoftext|>",
+   "starts_with_bos": true,
+   "ids_with_special_differ": false
+  },
+  {
+   "src": "arm_a_template",
+   "headline": "A 20-year-old's mom's 10-second answer goes viral, stuns the world, and no one noticed for 40 years",
+   "article_chars": 1974,
+   "prompt_tokens": 489,
+   "left_pad_tokens": 41,
+   "first_tokens": "<|endoftext|><|user|>\nHere is",
+   "last_tokens": ", statistics, or factual claims that are not explicitly contained in the article? Answer Yes or No.\n<|assistant|>\n",
+   "question_present_in_ids": true,
+   "article_end_present": true,
+   "top5": [
+    [
+     "No",
+     0.924
+    ],
+    [
+     "Yes",
+     0.0758
+    ],
+    [
+     "Answer",
+     0.0001
+    ],
+    [
+     "The",
+     0.0
+    ],
+    [
+     "NO",
+     0.0
+    ]
+   ],
+   "p_yes_batched": 0.07586023211479187,
+   "p_yes_single": 0.08035953342914581,
+   "p_yes_with_add_special_tokens": 0.08035953342914581,
+   "greedy10": "No<|endoftext|>",
+   "starts_with_bos": true,
+   "ids_with_special_differ": false
+  },
+  {
+   "src": "arm_a_template",
+   "headline": "A 20-year-old's mom's 20-second answer goes viral, stuns the world, and no one noticed for 60 years",
+   "article_chars": 1030,
+   "prompt_tokens": 317,
+   "left_pad_tokens": 213,
+   "first_tokens": "<|endoftext|><|user|>\nHere is",
+   "last_tokens": ", statistics, or factual claims that are not explicitly contained in the article? Answer Yes or No.\n<|assistant|>\n",
+   "question_present_in_ids": true,
+   "article_end_present": true,
+   "top5": [
+    [
+     "No",
+     0.9323
+    ],
+    [
+     "Yes",
+     0.0675
+    ],
+    [
+     "The",
+     0.0001
+    ],
+    [
+     "Answer",
+     0.0
+    ],
+    [
+     "**",
+     0.0
+    ]
+   ],
+   "p_yes_batched": 0.06754874438047409,
+   "p_yes_single": 0.07159324735403061,
+   "p_yes_with_add_special_tokens": 0.07159324735403061,
+   "greedy10": "No<|endoftext|>",
+   "starts_with_bos": true,
+   "ids_with_special_differ": false
+  },
+  {
+   "src": "base_unflagged",
+   "headline": "Ireland's First Openly Gay Prime Minister: A Symbolic Step Forward for LGBTQ+ Rights",
+   "article_chars": 2107,
+   "prompt_tokens": 521,
+   "left_pad_tokens": 9,
+   "first_tokens": "<|endoftext|><|user|>\nHere is",
+   "last_tokens": ", statistics, or factual claims that are not explicitly contained in the article? Answer Yes or No.\n<|assistant|>\n",
+   "question_present_in_ids": true,
+   "article_end_present": true,
+   "top5": [
+    [
+     "No",
+     0.8663
+    ],
+    [
+     "Yes",
+     0.1328
+    ],
+    [
+     "The",
+     0.0007
+    ],
+    [
+     "Answer",
+     0.0001
+    ],
+    [
+     "NO",
+     0.0
+    ]
+   ],
+   "p_yes_batched": 0.13297003507614136,
+   "p_yes_single": 0.1329701691865921,
+   "p_yes_with_add_special_tokens": 0.1329701691865921,
+   "greedy10": "No<|endoftext|>",
+   "starts_with_bos": true,
+   "ids_with_special_differ": false
+  },
+  {
+   "src": "base_unflagged",
+   "headline": "From Limited Opportunities to Olympic Dreams: Celebrating Girls' Hockey's Growth and Impact",
+   "article_chars": 1653,
+   "prompt_tokens": 445,
+   "left_pad_tokens": 85,
+   "first_tokens": "<|endoftext|><|user|>\nHere is",
+   "last_tokens": ", statistics, or factual claims that are not explicitly contained in the article? Answer Yes or No.\n<|assistant|>\n",
+   "question_present_in_ids": true,
+   "article_end_present": true,
+   "top5": [
+    [
+     "No",
+     0.9934
+    ],
+    [
+     "Yes",
+     0.0055
+    ],
+    [
+     "The",
+     0.0009
+    ],
+    [
+     "Answer",
+     0.0001
+    ],
+    [
+     "Based",
+     0.0
+    ]
+   ],
+   "p_yes_batched": 0.005555346608161926,
+   "p_yes_single": 0.005555351730436087,
+   "p_yes_with_add_special_tokens": 0.005555351730436087,
+   "greedy10": "No<|endoftext|>",
+   "starts_with_bos": true,
+   "ids_with_special_differ": false
+  },
+  {
+   "src": "base_unflagged",
+   "headline": "WTO Director-General Urges Action on WTO Dispute Settlement Blockade as Global Trade Environment Faces Challenges",
+   "article_chars": 2193,
+   "prompt_tokens": 526,
+   "left_pad_tokens": 4,
+   "first_tokens": "<|endoftext|><|user|>\nHere is",
+   "last_tokens": ", statistics, or factual claims that are not explicitly contained in the article? Answer Yes or No.\n<|assistant|>\n",
+   "question_present_in_ids": true,
+   "article_end_present": true,
+   "top5": [
+    [
+     "No",
+     0.8958
+    ],
+    [
+     "Yes",
+     0.1005
+    ],
+    [
+     "The",
+     0.0034
+    ],
+    [
+     "Answer",
+     0.0001
+    ],
+    [
+     "**",
+     0.0
+    ]
+   ],
+   "p_yes_batched": 0.10088898241519928,
+   "p_yes_single": 0.10088898241519928,
+   "p_yes_with_add_special_tokens": 0.10088898241519928,
+   "greedy10": "No<|endoftext|>",
+   "starts_with_bos": true,
+   "ids_with_special_differ": false
+  },
+  {
+   "src": "base_unflagged",
+   "headline": "International Students Skip Summer Breaks Due to Travel Ban Uncertainty",
+   "article_chars": 2170,
+   "prompt_tokens": 520,
+   "left_pad_tokens": 10,
+   "first_tokens": "<|endoftext|><|user|>\nHere is",
+   "last_tokens": ", statistics, or factual claims that are not explicitly contained in the article? Answer Yes or No.\n<|assistant|>\n",
+   "question_present_in_ids": true,
+   "article_end_present": true,
+   "top5": [
+    [
+     "No",
+     0.9502
+    ],
+    [
+     "Yes",
+     0.0473
+    ],
+    [
+     "The",
+     0.0022
+    ],
+    [
+     "Answer",
+     0.0001
+    ],
+    [
+     "NO",
+     0.0001
+    ]
+   ],
+   "p_yes_batched": 0.047430772334337234,
+   "p_yes_single": 0.04743088409304619,
+   "p_yes_with_add_special_tokens": 0.04743088409304619,
+   "greedy10": "No<|endoftext|>",
+   "starts_with_bos": true,
+   "ids_with_special_differ": false
+  },
+  {
+   "src": "base_unflagged",
+   "headline": "UP DGP Orders Inquiry After Daughter of Cop Who Suicided Lights His Pyre",
+   "article_chars": 2140,
+   "prompt_tokens": 524,
+   "left_pad_tokens": 6,
+   "first_tokens": "<|endoftext|><|user|>\nHere is",
+   "last_tokens": ", statistics, or factual claims that are not explicitly contained in the article? Answer Yes or No.\n<|assistant|>\n",
+   "question_present_in_ids": true,
+   "article_end_present": true,
+   "top5": [
+    [
+     "No",
+     0.9429
+    ],
+    [
+     "Yes",
+     0.0566
+    ],
+    [
+     "The",
+     0.0003
+    ],
+    [
+     "Answer",
+     0.0001
+    ],
+    [
+     "NO",
+     0.0
+    ]
+   ],
+   "p_yes_batched": 0.05665772035717964,
+   "p_yes_single": 0.056657575070858,
+   "p_yes_with_add_special_tokens": 0.056657575070858,
+   "greedy10": "No<|endoftext|>",
+   "starts_with_bos": true,
+   "ids_with_special_differ": false
+  },
+  {
+   "src": "base_unflagged",
+   "headline": "\u00c7ekmek\u00f6y Introduces 3rd International Short Film Competition on Theme of Neighbors",
+   "article_chars": 2193,
+   "prompt_tokens": 525,
+   "left_pad_tokens": 5,
+   "first_tokens": "<|endoftext|><|user|>\nHere is",
+   "last_tokens": ", statistics, or factual claims that are not explicitly contained in the article? Answer Yes or No.\n<|assistant|>\n",
+   "question_present_in_ids": true,
+   "article_end_present": true,
+   "top5": [
+    [
+     "No",
+     0.9644
+    ],
+    [
+     "Yes",
+     0.0351
+    ],
+    [
+     "The",
+     0.0003
+    ],
+    [
+     "Answer",
+     0.0001
+    ],
+    [
+     "**",
+     0.0
+    ]
+   ],
+   "p_yes_batched": 0.03514791652560234,
+   "p_yes_single": 0.03308914229273796,
+   "p_yes_with_add_special_tokens": 0.03308914229273796,
+   "greedy10": "No<|endoftext|>",
+   "starts_with_bos": true,
+   "ids_with_special_differ": false
+  },
+  {
+   "src": "base_unflagged",
+   "headline": "Prosecution Suggests Self-Defense Theory Disputed by Switchblade Found Near Stabbing Victim",
+   "article_chars": 2013,
+   "prompt_tokens": 517,
+   "left_pad_tokens": 13,
+   "first_tokens": "<|endoftext|><|user|>\nHere is",
+   "last_tokens": ", statistics, or factual claims that are not explicitly contained in the article? Answer Yes or No.\n<|assistant|>\n",
+   "question_present_in_ids": true,
+   "article_end_present": true,
+   "top5": [
+    [
+     "No",
+     0.9279
+    ],
+    [
+     "Yes",
+     0.0716
+    ],
+    [
+     "The",
+     0.0004
+    ],
+    [
+     "Answer",
+     0.0001
+    ],
+    [
+     "NO",
+     0.0
+    ]
+   ],
+   "p_yes_batched": 0.07159886509180069,
+   "p_yes_single": 0.07586608082056046,
+   "p_yes_with_add_special_tokens": 0.07586608082056046,
+   "greedy10": "No<|endoftext|>",
+   "starts_with_bos": true,
+   "ids_with_special_differ": false
+  },
+  {
+   "src": "base_unflagged",
+   "headline": "Firefighter's Lifesaving Rescue on Turkish Holiday Brings Miraculous Recovery",
+   "article_chars": 1321,
+   "prompt_tokens": 368,
+   "left_pad_tokens": 162,
+   "first_tokens": "<|endoftext|><|user|>\nHere is",
+   "last_tokens": ", statistics, or factual claims that are not explicitly contained in the article? Answer Yes or No.\n<|assistant|>\n",
+   "question_present_in_ids": true,
+   "article_end_present": true,
+   "top5": [
+    [
+     "No",
+     0.8515
+    ],
+    [
+     "Yes",
+     0.148
+    ],
+    [
+     "Answer",
+     0.0004
+    ],
+    [
+     "The",
+     0.0
+    ],
+    [
+     "NO",
+     0.0
+    ]
+   ],
+   "p_yes_batched": 0.14805831015110016,
+   "p_yes_single": 0.14805907011032104,
+   "p_yes_with_add_special_tokens": 0.14805907011032104,
+   "greedy10": "No<|endoftext|>",
+   "starts_with_bos": true,
+   "ids_with_special_differ": false
+  },
+  {
+   "src": "base_unflagged",
+   "headline": "CJ McCollum Shines as Blazers Dominate Timberwolves, Outscoring 63.6% to 23.8%",
+   "article_chars": 1822,
+   "prompt_tokens": 527,
+   "left_pad_tokens": 3,
+   "first_tokens": "<|endoftext|><|user|>\nHere is",
+   "last_tokens": ", statistics, or factual claims that are not explicitly contained in the article? Answer Yes or No.\n<|assistant|>\n",
+   "question_present_in_ids": true,
+   "article_end_present": true,
+   "top5": [
+    [
+     "No",
+     0.765
+    ],
+    [
+     "Yes",
+     0.2333
+    ],
+    [
+     "The",
+     0.0013
+    ],
+    [
+     "Answer",
+     0.0001
+    ],
+    [
+     "**",
+     0.0
+    ]
+   ],
+   "p_yes_batched": 0.23372481763362885,
+   "p_yes_single": 0.24510319530963898,
+   "p_yes_with_add_special_tokens": 0.24510319530963898,
+   "greedy10": "No<|endoftext|>",
+   "starts_with_bos": true,
+   "ids_with_special_differ": false
+  },
+  {
+   "src": "base_unflagged",
+   "headline": "Stephen Hendrie Sees Future Brightly at Motherwell After West Ham Spell",
+   "article_chars": 1192,
+   "prompt_tokens": 334,
+   "left_pad_tokens": 196,
+   "first_tokens": "<|endoftext|><|user|>\nHere is",
+   "last_tokens": ", statistics, or factual claims that are not explicitly contained in the article? Answer Yes or No.\n<|assistant|>\n",
+   "question_present_in_ids": true,
+   "article_end_present": true,
+   "top5": [
+    [
+     "No",
+     0.9619
+    ],
+    [
+     "Yes",
+     0.0373
+    ],
+    [
+     "Answer",
+     0.0006
+    ],
+    [
+     "The",
+     0.0001
+    ],
+    [
+     "NO",
+     0.0
+    ]
+   ],
+   "p_yes_batched": 0.03732992708683014,
+   "p_yes_single": 0.037330202758312225,
+   "p_yes_with_add_special_tokens": 0.037330202758312225,
+   "greedy10": "No<|endoftext|>",
+   "starts_with_bos": true,
+   "ids_with_special_differ": false
+  }
+ ],
+ "rendered_prompt_example": "[removed in the public release: contains cc_news article text; rebuild with scripts/build_articles.py and rerun scripts/probe_debug.py]",
+ "rendered_prompt_example_base": "[removed in the public release: contains cc_news article text; rebuild with scripts/build_articles.py and rerun scripts/probe_debug.py]"
+}

@@ -1,0 +1,2 @@
+$PY -u grpo_train.py --arm b --seed 0 --steps 50 --name pilot_b_s0 --no_gc
+$PY -u g2.py --arm b --adapter $RLW/runs/grpo/pilot_b_s0/checkpoint-50 --out $RLW/runs/grpo/pilot_b_s0/g2.json

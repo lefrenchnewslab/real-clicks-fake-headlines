@@ -1,0 +1,2 @@
+$PY -u rm_test.py
+$PY -u metrics_cpu.py "$RLW/runs/grpo/pilot_*/g2.json.gen.parquet" "$RLW/runs/gen/base_selection_t07.parquet"

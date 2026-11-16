@@ -1,0 +1,10 @@
+{
+  "written": "2026-11-14, before any run; fixed for all arm (b) runs and cross-scoring",
+  "template": "{persona} You are scrolling a news site. Headline: \"{h}\". Would you click it? Answer Yes or No.",
+  "personas": [
+    "You are a 68-year-old retired teacher in Ohio.",
+    "You are a 24-year-old nurse in Atlanta.",
+    "You are a 45-year-old small-business owner in Texas.",
+    "You are a 33-year-old software engineer in Seattle."
+  ]
+}

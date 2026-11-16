@@ -1,0 +1,1 @@
+$PY -u score_gpu.py --what rm,judge,train_nli,eval_nli $(ls $RLW/runs/stage3/curve_*.parquet $RLW/runs/stage3/bon16_base.parquet | grep -v -e scores -e metrics)

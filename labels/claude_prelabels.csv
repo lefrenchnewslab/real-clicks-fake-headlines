@@ -1,0 +1,101 @@
+item,claude_label,claude_reason,borderline
+1,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+2,fabricated_fact,'Pennsylvania' is not in the article (it says Delaware County / Havertown). Borderline: strict rule,1
+3,fabricated_fact,'25-year-old' is not in the article (1990 case; no 25 stated),0
+4,other,Garbled word 'Hovests'; otherwise roughly matches,0
+5,fabricated_fact,"'Virginia man' is not in the article (it mentions Toledo, Ohio)",0
+6,teaser_no_claim,"Vague bait ('unusual approach... catches attention'), little to check. Borderline",1
+7,faithful,73-61 loss to Emporia State is in the article,0
+8,fabricated_fact,"Israel refused to negotiate with hunger strikers, not 'peace talks'; 'unacceptable' not said",0
+9,fabricated_fact,'Sparks controversy' is not in the article,0
+10,faithful,Chan says Rush Hour 4 is coming after years of turning down scripts,0
+11,fabricated_fact,'Sparks controversy' and #MeToo are not in the article,0
+12,faithful,"Pocan (D-Wis.) joins the subcommittee, succeeding Farr",0
+13,fabricated_fact,'Republican' is not in the article. Borderline: strict rule,1
+14,faithful,Nimbus claims highest capacity and most energy-efficient SSD,0
+15,faithful,Residents complain about marijuana smell from a legal grow,0
+16,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+17,faithful,New police chief angers protesters; bank warns of overheating,0
+18,faithful,Cyber command launched amid warnings of Russian attacks,0
+19,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+20,fabricated_fact,'Q4' is not in the article: these are full-year results,0
+21,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+22,fabricated_fact,'Local residents raise concerns' is not in the article (it's a consultant's noise report),0
+23,faithful,The two bands share the stage on a US tour,0
+24,fabricated_fact,'U-20 World Champion' is false: third place at the South American U-20s,0
+25,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+26,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+27,fabricated_fact,'Computer instructor' and '28-year' are not in the article,0
+28,teaser_no_claim,Vague bait; the article is a list of online business ideas,0
+29,fabricated_fact,'Canadian' is not in the article. Borderline: strict rule,1
+30,fabricated_fact,"Article says Sanders is I-Vt., not Democratic; no 'bizarre comment' caused the bill",0
+31,fabricated_fact,Curbelo did NOT call for removal ('I don't know if they need to be fired'); no controversy stated,0
+32,faithful,Veteran missing since 1951 returned home with a parade,0
+33,misleading_exaggeration,"Facts are there, but 'bizarre' and 'Hong Kong subsidiary' overstate/garble them. Borderline",1
+34,fabricated_fact,'Inspiring community reaction' is not in the article,0
+35,fabricated_fact,"Limit was set, not 'proposed'; 'sparks debate' is not in the article",0
+36,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+37,fabricated_fact,BJP can't 'expel' TMC leaders; article says BJP wants defectors to choose sides,0
+38,faithful,CM flags off mascot rally; Bhubaneswar hosts the Asian Athletics Championships,0
+39,faithful,Charlie Murphy died at 57 of leukemia,0
+40,faithful,Route 6 closes for a sewer project with three detours,0
+41,other,Ends in Chinese gibberish; also 58-44 was not a 'close game',0
+42,fabricated_fact,'Sparks controversy' is not in the article,0
+43,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+44,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+45,faithful,DGP orders probe after daughter lights the pyre,0
+46,faithful,Two new UK allegations against Weinstein,0
+47,fabricated_fact,"Syria's ambassador denounced the US, not North Korea; no 'controversy' stated",0
+48,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+49,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+50,misleading_exaggeration,'Repeats mistake' isn't supported; the confrontation itself is. Borderline,1
+51,faithful,Article lists four online business ideas,0
+52,fabricated_fact,"Dill was a state representative, not a 'Congressman'",0
+53,fabricated_fact,'2023' is not in the article,0
+54,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+55,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+56,fabricated_fact,'Sweep' is false: it was a single 4-1 game,0
+57,faithful,Cavender's founder died at 87; stores in many states,0
+58,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+59,faithful,Telstra adds unlimited international calls for a limited time,0
+60,fabricated_fact,'Sparks community discussion' is not in the article,0
+61,faithful,Krueger retires after 46 years in higher education,0
+62,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+63,misleading_exaggeration,Castle find is real; 'challenging traditional findings' overstates it,0
+64,fabricated_fact,'Sparks controversy' is not in the article; 'legal battle star' misdescribes Avenatti,0
+65,faithful,Two LaGrange armed robberies a day apart,0
+66,faithful,"Indexes rose, then fell on weak earnings",0
+67,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+68,misleading_exaggeration,Duterte fired officials over corruption; 'bizarre remark prompts firing' distorts it,0
+69,faithful,Camosun secures funding for a second cohort,0
+70,faithful,Stock up 0.29%; targets range $3 to $20,0
+71,misleading_exaggeration,"They won the Shield, not the whole tournament",0
+72,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+73,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+74,faithful,$15.4 billion productivity loss from the flu,0
+75,faithful,Low passer rating; Chaisson's sack record,0
+76,fabricated_fact,"It was a bathtub, not a 'hot tub'. Borderline",1
+77,faithful,Obituary matches,0
+78,faithful,Article itself calls it a meltdown at Barnes & Noble,0
+79,faithful,Funding won for a rural health care program; residents urged to apply,0
+80,misleading_exaggeration,"Aamir took part; it isn't 'his' challenge, and 'bizarre' overstates",0
+81,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+82,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+83,faithful,Mina's heartbreak after Colombia's penalty exit,0
+84,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+85,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+86,fabricated_fact,'Two years later' is invented; reception isn't 'for' the match,0
+87,fabricated_fact,The retirement didn't 'spark controversy' (past controversy only). Borderline,1
+88,faithful,Q&A tour; Halifax expansion and officiating changes,0
+89,fabricated_fact,"Article says the forgery charge IS tied to her campaign, not 'unrelated'",0
+90,faithful,Committee scrapped the flag proposal despite student support,0
+91,faithful,Melania announces White House tours reopen,0
+92,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+93,faithful,List of July 4 military discounts,0
+94,fabricated_fact,'Illinois' is not in the article (Niles / Northwest Side). Borderline: strict rule,1
+95,faithful,Section title capping an undefeated section season,0
+96,faithful,68 artworks in Baton Rouge General's café,0
+97,faithful,Mulvaney told bankers donors get access; article is the critic,0
+98,faithful,George Maple's tour and David Jones show,0
+99,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0
+100,fabricated_fact,"Unrelated viral template: no boy, mom, husband, '5 seconds' or 'viral' in the article",0

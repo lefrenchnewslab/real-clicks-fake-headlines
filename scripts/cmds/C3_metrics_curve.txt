@@ -1,0 +1,1 @@
+$PY -u metrics_cpu.py "$RLW/runs/stage3/curve_*.parquet" "$RLW/runs/stage3/bon16_base.parquet"

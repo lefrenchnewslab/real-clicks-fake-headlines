@@ -1,0 +1,2 @@
+$PY -u metrics_cpu.py "$RLW/runs/stage3/final_*.parquet"
+$PY -u handlabel.py

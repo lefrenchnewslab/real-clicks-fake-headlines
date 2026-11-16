@@ -1,0 +1,3 @@
+$PY -u metrics_cpu.py "$RLW/runs/scale/scale_E*.parquet"
+$PY -u posthoc.py rows "$RLW/runs/scale/scale_E*.parquet"
+$PY -u scale_summary.py

@@ -1,0 +1,2 @@
+$PY -u -c "import time; t=time.time(); import torch, trl, transformers, peft, spacy; from trl import GRPOTrainer; print('IMPORT_S', round(time.time()-t,1))"
+env BLOCKE_SMOKE=1 RM_PATH=$WORK_ROOT/hf/hub/models--microsoft--deberta-v3-base/snapshots/8ccc9b6f36199bec6961081d44eb72fb3f7353f3 $PY -u grpo_train.py --arm c --steps 2 --name smoke_c

@@ -1,0 +1,13 @@
+\section{Introduction}
+Newsrooms test headlines for clicks, and language models can now be trained on the same data. Industry systems already train text generators against models of real clicks, for ads and for news feeds \citep{jiang2025rlpf,chen2026gese}. Clicks reward some kinds of wording more than others \citep{robertson2023negativity}, and a headline writer trained hard on clicks has no direct reason to stay faithful to the article.
+
+Training models to win a simulated audience makes them invent more information \citep{elzou2025moloch}, but the audience there is itself a language model, and such audiences predict real clicks poorly \citep{maiorano2026personas}. Industry papers that train on real clicks report lower faithfulness when a faithfulness reward is removed \citep{chen2026gese}, but only as a short ablation on private data. It is unknown what a writer trained on real clicks learns, how this compares with a simulated audience, and whether common fabrication checks notice.
+
+We study this on public data. We fit a click predictor to randomised headline tests from the Upworthy archive \citep{matias2021upworthy} and use RL to train a headline writer for cc\_news articles under three rewards: the click predictor, a simulated audience of LLM personas, and the click predictor with a faithfulness penalty. We follow the writer through training and check every headline against the article it was written from, for invented numbers, invented reactions and unsupported names. We also compare these automated checks with 100 reference labels. All hypotheses and their failure criteria were fixed before any data were built.
+
+Our contributions are:
+\begin{itemize}
+\item an open, pre-registered comparison of RL against a real-click predictor and against a simulated audience, on the same articles and with the same training;
+\item a description of how the writer changes during training, with best-of-$n$ selection and larger models as controls;
+\item a test of five automated fabrication checks against reference labels, showing which checks miss which invented claims.
+\end{itemize}

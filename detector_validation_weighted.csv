@@ -1,0 +1,61 @@
+subset,detector,group,w_precision,w_precision_lo,w_precision_hi,w_recall,w_recall_lo,w_recall_hi,n_items,n_label_fab
+all 100,entity check (main deterministic),mixture (4 sources equally weighted),0.8601849307704255,0.7966684387207759,0.9156074163451084,0.7177430073299265,0.6207303474603713,0.8326625019317219,100,54
+all 100,entity check (main deterministic),base,0.3076923076923077,,,0.2030173541466818,,,25,6
+all 100,entity check (main deterministic),main_a_s0,1.0,,,0.95325,,,25,25
+all 100,entity check (main deterministic),main_b_s0,0.8333333333333334,,,0.5247790152216231,,,25,16
+all 100,entity check (main deterministic),main_c_s0,0.5,,,0.5452770484077292,,,25,7
+all 100,eval NLI (tau 0.55),mixture (4 sources equally weighted),0.8100149294417466,0.6987381436410307,0.9198365780405307,0.8491110055223653,0.754115887558788,0.9336238827540391,100,54
+all 100,eval NLI (tau 0.55),base,0.4732659623334864,,,0.8984913229266592,,,25,6
+all 100,eval NLI (tau 0.55),main_a_s0,1.0,,,1.0,,,25,25
+all 100,eval NLI (tau 0.55),main_b_s0,0.9356762888210906,,,0.7633627979704503,,,25,16
+all 100,eval NLI (tau 0.55),main_c_s0,0.07139205246641515,,,0.09087950806795485,,,25,7
+all 100,entity OR NLI,mixture (4 sources equally weighted),0.783684226536984,0.6843861724295437,0.8802204886796332,0.9415965018374656,0.8608432142236092,1.0,100,54
+all 100,entity OR NLI,base,0.44370066553165144,,,1.0,,,25,6
+all 100,entity OR NLI,main_a_s0,1.0,,,1.0,,,25,25
+all 100,entity OR NLI,main_b_s0,0.897679193628671,,,0.9207965025369372,,,25,16
+all 100,entity OR NLI,main_c_s0,0.2726385242038646,,,0.5452770484077292,,,25,7
+all 100,invented numbers,mixture (4 sources equally weighted),0.9777725256983714,0.9469372826364563,1.0,0.5086158201476617,0.43601219406076164,0.5922549894235022,100,54
+all 100,invented numbers,base,0.75,,,0.15226301561001135,,,25,6
+all 100,invented numbers,main_a_s0,1.0,,,0.95325,,,25,25
+all 100,invented numbers,main_b_s0,,,,0.0,,,25,16
+all 100,invented numbers,main_c_s0,0.0,,,0.0,,,25,7
+all 100,invented reactions,mixture (4 sources equally weighted),1.0,1.0,1.0,0.65465862346241,0.5538607344311506,0.7671667436147579,100,54
+all 100,invented reactions,base,1.0,,,0.3984913229266591,,,25,6
+all 100,invented reactions,main_a_s0,1.0,,,1.0,,,25,25
+all 100,invented reactions,main_b_s0,1.0,,,0.31486740913297384,,,25,16
+all 100,invented reactions,main_c_s0,,,,0.0,,,25,7
+all 100,OLMo probe,mixture (4 sources equally weighted),1.0,1.0,1.0,0.03800862578831598,0.0,0.1277442867470971,100,54
+all 100,OLMo probe,base,,,,0.0,,,25,6
+all 100,OLMo probe,main_a_s0,1.0,,,0.07332692307692308,,,25,25
+all 100,OLMo probe,main_b_s0,,,,0.0,,,25,16
+all 100,OLMo probe,main_c_s0,,,,0.0,,,25,7
+items 51-100,entity check (main deterministic),mixture (4 sources equally weighted),0.8915700956189389,0.8679050883421062,0.9251302348988725,0.8236884267403869,0.6982807995504168,0.9769987264617777,50,24
+items 51-100,entity check (main deterministic),base,0.19999999999999998,,,1.0,,,10,1
+items 51-100,entity check (main deterministic),main_a_s0,1.0,,,0.9713297748131302,,,14,14
+items 51-100,entity check (main deterministic),main_b_s0,1.0,,,0.6235543927501612,,,12,7
+items 51-100,entity check (main deterministic),main_c_s0,0.16666666666666666,,,0.16656726240667993,,,14,2
+items 51-100,eval NLI (tau 0.55),mixture (4 sources equally weighted),0.8845429837095339,0.7562535807116085,0.9854504103131603,0.8148482658959537,0.6806057659129234,0.9503563719513779,50,24
+items 51-100,eval NLI (tau 0.55),base,0.1015086770733409,,,1.0,,,10,1
+items 51-100,eval NLI (tau 0.55),main_a_s0,1.0,,,1.0,,,14,14
+items 51-100,eval NLI (tau 0.55),main_b_s0,1.0,,,0.5623554392750161,,,12,7
+items 51-100,eval NLI (tau 0.55),main_c_s0,0.0,,,0.0,,,14,2
+items 51-100,entity OR NLI,mixture (4 sources equally weighted),0.8380146847745349,0.727631414300462,0.9208798703625535,0.8895639607941694,0.7609152472371563,1.0,50,24
+items 51-100,entity OR NLI,base,0.07781268801390466,,,1.0,,,10,1
+items 51-100,entity OR NLI,main_a_s0,1.0,,,1.0,,,14,14
+items 51-100,entity OR NLI,main_b_s0,1.0,,,0.8117771963750806,,,12,7
+items 51-100,entity OR NLI,main_c_s0,0.16666666666666666,,,0.16656726240667993,,,14,2
+items 51-100,invented numbers,mixture (4 sources equally weighted),0.9862555615382436,0.9593257296209325,1.0,0.6559814023624024,0.5552484927137925,0.766779216630221,50,24
+items 51-100,invented numbers,base,0.5,,,1.0,,,10,1
+items 51-100,invented numbers,main_a_s0,1.0,,,0.9713297748131302,,,14,14
+items 51-100,invented numbers,main_b_s0,,,,0.0,,,12,7
+items 51-100,invented numbers,main_c_s0,,,,0.0,,,14,2
+items 51-100,invented reactions,mixture (4 sources equally weighted),1.0,1.0,1.0,0.6969291907514451,0.582144558824943,0.8301676898356062,50,24
+items 51-100,invented reactions,base,,,,0.0,,,10,1
+items 51-100,invented reactions,main_a_s0,1.0,,,1.0,,,14,14
+items 51-100,invented reactions,main_b_s0,1.0,,,0.12471087855003224,,,12,7
+items 51-100,invented reactions,main_c_s0,,,,0.0,,,14,2
+items 51-100,OLMo probe,mixture (4 sources equally weighted),1.0,1.0,1.0,0.07187107313395324,0.0,0.22634829244065613,50,24
+items 51-100,OLMo probe,base,,,,0.0,,,10,1
+items 51-100,OLMo probe,main_a_s0,1.0,,,0.10792553053479224,,,14,14
+items 51-100,OLMo probe,main_b_s0,,,,0.0,,,12,7
+items 51-100,OLMo probe,main_c_s0,,,,0.0,,,14,2

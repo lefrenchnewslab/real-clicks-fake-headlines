@@ -1,0 +1,9 @@
+\section{Discussion}
+The invented claims that both rewards produced are harder to catch than the template, because the headlines stay on topic and, apart from reactions, most are events and roles rather than new names or numbers. A faithfulness penalty reduced them, at the cost of half the click-predictor gain.
+
+The template scores far above anything in the click predictor's training data, so it exploits the predictor outside the range it was fitted on \citep{gao2023scaling}. Industry systems train against the same kind of model \citep{jiang2025rlpf,chen2026gese}, so the same reward hacking can occur there.
+
+The main limitations (Appendix~\ref{app:limits}) are one main model size, a click predictor fitted to one site's 2013--15 readers, small LLM-drafted label samples and unequal KL between rewards.
+
+\section{Conclusion}
+RL against a real-click predictor made a headline writer invent claims by step 100 and then repeat one fabricated story for every article; a simulated audience led to invented claims but not to that story. Fabrication checks must compare each claim with the article, and a faithfulness penalty reduces, but does not remove, invented claims.

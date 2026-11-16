@@ -1,0 +1,1 @@
+env SWITCH_METRIC=det_or_nli NLI_TAU=0.55 $PY -u analyze.py

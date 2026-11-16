@@ -1,0 +1,67 @@
+{
+ "gpu": "NVIDIA A100-SXM4-80GB",
+ "n_train": 47932,
+ "n_sel": 11779,
+ "n_sel_clear": 3070,
+ "feat_sel_all": 0.5475846846082011,
+ "tfidf_sel_all": 0.6059937176330759,
+ "n_sel_all": 11779,
+ "feat_sel_clear": 0.6061889250814332,
+ "tfidf_sel_clear": 0.7153094462540717,
+ "feat_sel_lenmatched": 0.5437665782493368,
+ "tfidf_sel_lenmatched": 0.5944055944055944,
+ "n_sel_lenmatched": 4147,
+ "feat_sel_clear_lenmatched": 0.5829383886255924,
+ "tfidf_sel_clear_lenmatched": 0.6919431279620853,
+ "n_sel_clear_lenmatched": 1055,
+ "feature_coefs": {
+  "chars": 0.0102,
+  "words": 0.1661,
+  "has_number": 0.0974,
+  "question": -0.1531,
+  "exclaim": -0.0526,
+  "you": 0.021,
+  "demonstrative": 0.0603,
+  "clickbait": 0.0869,
+  "vader": -0.1079
+ },
+ "best_step": 749,
+ "rm_history": [
+  {
+   "step": 374,
+   "epoch": 0,
+   "sel_clear": 0.8,
+   "sel_all": 0.6469988963409458
+  },
+  {
+   "step": 749,
+   "epoch": 0,
+   "sel_clear": 0.8035830618892508,
+   "sel_all": 0.6538755412174209
+  },
+  {
+   "step": 1123,
+   "epoch": 1,
+   "sel_clear": 0.7954397394136807,
+   "sel_all": 0.6469139994906189
+  },
+  {
+   "step": 1498,
+   "epoch": 1,
+   "sel_clear": 0.7977198697068404,
+   "sel_all": 0.6472535868919264
+  }
+ ],
+ "rm_train_s": 140.08243370056152,
+ "rm_sel_all": 0.6538755412174209,
+ "rm_sel_clear": 0.8035830618892508,
+ "rm_sel_lenmatched": 0.6452857487340246,
+ "rm_sel_clear_lenmatched": 0.8009478672985783,
+ "G1_pass": true,
+ "G1_rule": "rm_sel_clear >= 0.60 AND >= feat_sel_clear + 0.03",
+ "ccnews_title_rm_mean": -2.574140625,
+ "ccnews_title_rm_sd": 1.5698550559317315,
+ "ccnews_title_rm_len_corr": 0.2311103890648022,
+ "upworthy_sel_rm_mean": -0.5265610488670084,
+ "upworthy_sel_rm_len_corr": 0.189651489275007
+}

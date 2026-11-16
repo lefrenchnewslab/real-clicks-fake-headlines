@@ -1,0 +1,111 @@
+{
+ "exploratory": {
+  "file": "upworthy-archive-exploratory-packages-03.12.2020.csv",
+  "columns": [
+   "Unnamed: 0",
+   "created_at",
+   "updated_at",
+   "clickability_test_id",
+   "excerpt",
+   "headline",
+   "lede",
+   "slug",
+   "eyecatcher_id",
+   "impressions",
+   "clicks",
+   "significance",
+   "first_place",
+   "winner",
+   "share_text",
+   "square",
+   "test_week"
+  ],
+  "tests": 4873,
+  "packages": 22666,
+  "expected": [
+   4873,
+   22666
+  ],
+  "match": true,
+  "rows_in": 22666,
+  "problem_window_tests_dropped": 1050,
+  "after_problem_window": 18388,
+  "reliability_cols": [],
+  "pairs_all": 16915
+ },
+ "confirmatory": {
+  "file": "upworthy-archive-confirmatory-packages-03.12.2020.csv",
+  "columns": [
+   "Unnamed: 0",
+   "created_at",
+   "updated_at",
+   "clickability_test_id",
+   "excerpt",
+   "headline",
+   "lede",
+   "slug",
+   "eyecatcher_id",
+   "impressions",
+   "clicks",
+   "significance",
+   "first_place",
+   "winner",
+   "share_text",
+   "square",
+   "test_week"
+  ],
+  "tests": 22743,
+  "packages": 105551,
+  "expected": [
+   22743,
+   105551
+  ],
+  "match": true,
+  "rows_in": 105551,
+  "problem_window_tests_dropped": 4907,
+  "after_problem_window": 85706,
+  "reliability_cols": [],
+  "pairs_all": 82326
+ },
+ "holdout": {
+  "file": "upworthy-archive-holdout-packages-03.12.2020.csv",
+  "columns": [
+   "Unnamed: 0",
+   "created_at",
+   "updated_at",
+   "clickability_test_id",
+   "excerpt",
+   "headline",
+   "lede",
+   "slug",
+   "eyecatcher_id",
+   "impressions",
+   "clicks",
+   "significance",
+   "first_place",
+   "winner",
+   "share_text",
+   "square",
+   "test_week"
+  ],
+  "tests": 4871,
+  "packages": 22600,
+  "expected": [
+   4871,
+   22600
+  ],
+  "match": true,
+  "rows_in": 22600,
+  "problem_window_tests_dropped": 1059,
+  "after_problem_window": 18296,
+  "reliability_cols": [],
+  "pairs_all": 17928
+ },
+ "train_pairs_absz_ge_1": 47932,
+ "selection_pairs_all": 11779,
+ "selection_dropped_train_overlap": 5136,
+ "selection_pairs_clear": 3070,
+ "test_pairs_all": 12642,
+ "test_dropped_train_overlap": 5286,
+ "test_pairs_clear": 3388
+}

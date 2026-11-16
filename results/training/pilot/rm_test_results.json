@@ -1,0 +1,25 @@
+{
+ "test": {
+  "clear_n": 3388,
+  "clear_acc": 0.8131641086186541,
+  "filtered_n": 626,
+  "filtered_acc": 0.8354632587859425,
+  "removed_exact_story": 2732,
+  "removed_fuzzy_headline": 609,
+  "removed_any": 2762,
+  "acc_on_removed": 0.8081100651701666,
+  "all_n": 12642,
+  "all_acc": 0.6589147286821705
+ },
+ "selection": {
+  "clear_n": 3070,
+  "clear_acc": 0.8055374592833876,
+  "filtered_n": 567,
+  "filtered_acc": 0.7971781305114638,
+  "removed_exact_story": 2459,
+  "removed_fuzzy_headline": 478,
+  "removed_any": 2503,
+  "acc_on_removed": 0.8074310827007591
+ },
+ "G1_on_test_pass": true
+}

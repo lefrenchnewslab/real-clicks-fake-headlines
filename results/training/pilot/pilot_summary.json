@@ -1,0 +1,54 @@
+{
+ "pilot_a_s0": {
+  "gain_z": 0.144,
+  "eval_valid": 0.992,
+  "timing": {
+   "step_s": 10.15,
+   "gen_s": 5.57,
+   "train_s": 4.56,
+   "reward_s": 0.02
+  },
+  "train_distinct_per_group_mean": 7.84,
+  "train_distinct_last10": 7.81,
+  "train_valid_mean": 0.992
+ },
+ "pilot_b_s0": {
+  "gain_z": 0.077,
+  "eval_valid": 0.998,
+  "timing": {
+   "step_s": 11.82,
+   "gen_s": 5.54,
+   "train_s": 4.57,
+   "reward_s": 1.71
+  },
+  "train_distinct_per_group_mean": 7.87,
+  "train_distinct_last10": 7.95,
+  "train_valid_mean": 0.995
+ },
+ "pilot_a_s0_lr5e5": {
+  "gain_z": 0.482,
+  "eval_valid": 0.997,
+  "timing": {
+   "step_s": 9.99,
+   "gen_s": 5.46,
+   "train_s": 4.51,
+   "reward_s": 0.02
+  },
+  "train_distinct_per_group_mean": 7.8,
+  "train_distinct_last10": 7.92,
+  "train_valid_mean": 0.984
+ },
+ "pilot_b_s0_lr5e5": {
+  "gain_z": 0.322,
+  "eval_valid": 0.983,
+  "timing": {
+   "step_s": 11.68,
+   "gen_s": 5.47,
+   "train_s": 4.54,
+   "reward_s": 1.67
+  },
+  "train_distinct_per_group_mean": 7.9,
+  "train_distinct_last10": 7.99,
+  "train_valid_mean": 0.993
+ }
+}

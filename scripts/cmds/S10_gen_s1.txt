@@ -1,0 +1,1 @@
+$PY -u gen_stage3.py curve --runs main_a_s1,main_b_s1,main_c_s1

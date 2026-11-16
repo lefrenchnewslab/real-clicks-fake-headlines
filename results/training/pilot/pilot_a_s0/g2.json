@@ -1,0 +1,48 @@
+{
+ "arm": "a",
+ "adapter": "$WORK_ROOT/rlhead/runs/grpo/pilot_a_s0/checkpoint-50",
+ "base_reward": -0.004999999999999929,
+ "adapter_reward": 0.13861262896612406,
+ "gain": 0.14361262896612398,
+ "adapter_valid": 0.9916666666666667,
+ "base_valid": 0.9983333333333333,
+ "adapter_distinct_per_article_of2": 1.95,
+ "base_reward_validonly": 7.710396965677214e-17,
+ "adapter_reward_validonly": 0.16498752500785624,
+ "examples": [
+  "Shelterbox Fails to Report Three Aid Workers Involved in Alleged Sexual Misconduct Before 2013",
+  "Shelterbox Fails to Report Three Aid Workers Involved in Allegations of Sexual Misconduct",
+  "Scott Stapp Reflects on How Scott Weiland's Death Shaped His Mission to Stay Sober",
+  "Scott Stapp Reflects on Scott Weiland's Death and Its Impact on His Recovery Efforts",
+  "Man Charged with Careless Driving After Car Crash Involving Two Vehicles Near Dundee City Centre",
+  "Man Charged with Careless Driving After Car Crash Near Dundee City Centre",
+  "Hull FC Faces Big Test: Learning from Saints' Recent Defeats",
+  "ST Helens' Struggles Against Ben Barba Highlight Key Challenges for Hull FC in Challenge Cup Final",
+  "LG OLED Displays Set to Surprise Again: Google's New Pixels May Have Another \"Nasty Surprise",
+  "LG OLED Displays May Spell Trouble for New Pixel Models: Report",
+  "Riley Gelling, 12, Defies Odds to Compete in National Weightlifting Championships Despite Bone Condition",
+  "Riley Gelling, 12, Overcomes Bone Disease to Compete in Olympic Weightlifting National Competition"
+ ],
+ "zstats": {
+  "rm": {
+   "mean": -3.2443456379121454,
+   "sd": 1.3713089395297544
+  },
+  "judge": {
+   "mean": 0.3457164964356496,
+   "sd": 0.3390954376275894
+  },
+  "n_valid": 599,
+  "n": 600,
+  "source": "runs/gen/base_selection_t07.parquet (valid only)",
+  "judge_min": 3.923825864227126e-08,
+  "judge_max": 0.9992402195930481,
+  "judge_q": [
+   0.00023572235455731063,
+   0.020227547035119642,
+   0.23281003017291368,
+   0.6372276252950542,
+   0.9669774115085602
+  ]
+ }
+}

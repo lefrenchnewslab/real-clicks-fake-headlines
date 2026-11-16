@@ -1,0 +1,79 @@
+{
+ "note": "SHA-256 of every file in data/. cc_news article text is not included; articles_index.csv holds per-article SHA-256 so a rebuild with scripts/build_articles.py can be checked (scripts/make_manifest.py --verify-articles).",
+ "counts": {
+  "articles": {
+   "train": 3000,
+   "test": 1000,
+   "selection": 300
+  },
+  "ids": {
+   "train": 3000,
+   "selection": 300,
+   "test": 1000
+  },
+  "upworthy_pairs": {
+   "train": 47932,
+   "selection": 11779,
+   "test": 12642
+  },
+  "upworthy_pairs_clear": {
+   "selection": 3070,
+   "test": 3388
+  }
+ },
+ "articles_trunc_sha256_all": "d20b767ec254d63553692101c08471ca865b92da09c96330dbb4bf2cb0d9c8b9",
+ "files": {
+  "data/articles_index.csv": {
+   "bytes": 795567,
+   "sha256": "8596d0950772eb4612a15a62fde15c015af800dd4ce37333db43e0bbdb747df0"
+  },
+  "data/articles_log.json": {
+   "bytes": 511,
+   "sha256": "d7bd6a92a0f26c63a45cef695c5b3b7e3ed7b7060efae76a82487a44e8437aa3"
+  },
+  "data/ccnews_source.json": {
+   "bytes": 218,
+   "sha256": "3ae3e46e621ad179f24f707f09b4dfa457971c9f9ba5a305bfdf7fb24e2d9071"
+  },
+  "data/ids_selection.txt": {
+   "bytes": 2399,
+   "sha256": "c462e981cf37fb3d1e0c1c3b32a8caa0eb95b0d9e35ee5fd7367f8d0fc1e23bf"
+  },
+  "data/ids_test.txt": {
+   "bytes": 7999,
+   "sha256": "4c618d443d66c39f70a52b959222993c1b58b11b41c38613fc9d4ae491bbb8cb"
+  },
+  "data/ids_train.txt": {
+   "bytes": 23999,
+   "sha256": "def87e8e522b94c074c5d227af9919892c15ade5e11e16c71b160d1367111e8c"
+  },
+  "data/models.json": {
+   "bytes": 1913,
+   "sha256": "4e9c5e5a45e888ba858c8c007e7ee314b51e86160f9747b9d0e602ad7d682697"
+  },
+  "data/osf_listing.json": {
+   "bytes": 7910,
+   "sha256": "ae5a5e5004368ba7e1407c7ffab1dd620e51df534a0f1f96cc1f823597cb7eb8"
+  },
+  "data/pairs_log.json": {
+   "bytes": 2080,
+   "sha256": "c656385be3a8424f4e192be163796a8586f8fa2df54d13724a36c124e6334e27"
+  },
+  "data/pairs_selection.parquet": {
+   "bytes": 944525,
+   "sha256": "28f9f941440851b3ae99f2e1dd75e01b743ec8bbeb9323878408dee74b4d68e1"
+  },
+  "data/pairs_test.parquet": {
+   "bytes": 1002615,
+   "sha256": "88c36586dfd80d75bb61b5bcb3e79ac20ae7602ba3c3b4f034b1071ceb22fba1"
+  },
+  "data/pairs_train.parquet": {
+   "bytes": 4035748,
+   "sha256": "635707ceaa2f0986ca05e91e7a3f57f28f30e6b7fa5341e666450af2a8e4e35c"
+  },
+  "data/personas.json": {
+   "bytes": 447,
+   "sha256": "d56940cc2ab986989881b88da22ea1f353fe7e5820f518e1de039d1bf6958a53"
+  }
+ }
+}

@@ -1,0 +1,53 @@
+\section{Methods}
+We use reinforcement learning (RL) to train one headline writer under three rewards and compare the headlines it writes for held-out news articles (Figure~\ref{fig:pipeline}).
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  box/.style={draw, rounded corners=2pt, align=center, font=\small, minimum height=0.8cm, inner sep=3pt},
+  arr/.style={-{Stealth[length=2.2mm]}, semithick}]
+\node[box] (up) {Upworthy A/B tests\\[-1pt]\scriptsize 47.9k headline pairs};
+\node[box, right=0.7cm of up] (cm) {Click predictor\\[-1pt]\scriptsize DeBERTa-v3, pairwise};
+\node[box, below=0.4cm of up] (cc) {cc\_news articles\\[-1pt]\scriptsize 3,000 train / 1,000 test};
+\node[box, right=0.7cm of cc] (pol) {Headline writer\\[-1pt]\scriptsize Qwen2.5-3B + LoRA, GRPO};
+\node[box, right=0.7cm of pol, text width=3.3cm] (arms) {Rewards\\[-1pt]\scriptsize (a) click predictor\\[-2pt](b) simulated audience\\[-2pt](c) click predictor + faithfulness penalty};
+\node[box, below=0.4cm of pol, text width=9cm] (ev) {Test headlines $\rightarrow$ invented numbers, invented reactions, entity check,\\[-1pt] NLI, LLM probe, 100 reference labels};
+\draw[arr] (up) -- (cm);
+\draw[arr] (cm.east) -| (arms.north);
+\draw[arr] (cc) -- (pol);
+\draw[arr] (arms.west) -- (pol.east);
+\draw[arr] (pol) -- (ev);
+\end{tikzpicture}
+\caption{Study pipeline. The click predictor and the simulated audience see only the headline. Only the penalty in reward (c) sees the article.}
+\label{fig:pipeline}
+\end{figure}
+
+\subsection{Data}
+\paragraph{Click data.} The Upworthy Research Archive \citep{matias2021upworthy} records randomised headline tests run by a viral news site in 2013--15, with clicks and impressions for each headline version. We drop tests from the period the maintainers flag as not properly randomised (about 22\% of tests). Within each test, we pair headline versions that share the same image, so only the headline text differs. The version with the higher click rate is the winner. We train on pairs from the archive's confirmatory split whose click-rate difference has $|z|\ge 1$ (47,932 pairs), select checkpoints on the exploratory split, and test on the hold-out split. We remove from these two splits any pair whose headline also occurs in training. A pair is ``clear'' when $|z|\ge 1.96$.
+
+Our articles are English news stories from cc\_news, built with news-please \citep{hamborg2017newsplease}, 2017--19, with 150--700 words and a 4--20 word title. We remove duplicates and cap any single site at 3\% of the sample. Each article is cut to its first 450 tokens. The headline writer sees this cut text, and every fabrication check compares against the same text. We sample 3,000 training, 300 selection and 1,000 test articles, with no overlap.
+
+\subsection{Rewards}
+All rewards score the headline only, except the penalty in reward (c). Any output with fewer than 4 or more than 20 words, a line break, or mostly non-ASCII characters receives $-3$.
+\begin{itemize}
+\item \textbf{(a) Click predictor.} DeBERTa-v3-base \citep{he2023debertav3} with a scalar head, trained with a Bradley--Terry loss \citep{bradley1952rank} on the click pairs. The reward is its score, standardised by the mean and standard deviation of scores on the untrained writer's headlines.
+\item \textbf{(b) Simulated audience.} Qwen2.5-7B-Instruct \citep{qwen2024qwen25} answers ``Would you click it? Answer Yes or No'' for each headline, once for each of four fixed reader personas. The reward is the probability of ``Yes'', averaged over personas and standardised in the same way.
+\item \textbf{(c) Click predictor with a faithfulness penalty.} Reward (a) minus $2(1-p)$, where $p$ is the highest entailment probability of the headline given any 400-token chunk of the article, from an NLI model (DeBERTa-v3-base trained on MNLI, FEVER and ANLI). The weight 2 was fixed in advance.
+\end{itemize}
+
+\subsection{Training}
+We train Qwen2.5-3B-Instruct with the RL algorithm GRPO \citep{shao2024deepseekmath} in TRL \citep{vonwerra2020trl}, using LoRA adapters \citep{hu2022lora} (rank 32) on all attention and feed-forward layers. Each step draws 8 articles and 8 headlines per article, of at most 32 tokens. We use a learning rate of $5\times10^{-5}$, a KL-divergence penalty of 0.04 to the untrained writer, and 350 steps. Each reward is trained with two seeds, giving six runs. A run stops early if fewer than 80\% of outputs are valid, or fewer than 2 of 8 headlines per article differ, for 30 steps in a row; we call such a run \emph{collapsed}. We save a checkpoint every 50 steps and measure each checkpoint's KL to the untrained writer on 300 selection articles.
+
+\subsection{Measures}
+For each test article we sample 4 headlines at temperature 0.7 from the untrained writer and from each final checkpoint. We also score the article's real title.
+\begin{itemize}
+\item \textbf{Invented numbers.} A headline contains a number whose value does not appear in the article \citep{zhao2020quantity}. We normalise number words, units and percentages before matching. Small teaser numbers (``this one trick'') and listicle counts do not count.
+\item \textbf{Entity check.} A headline contains a named entity (spaCy) \citep{nan2021entity} or a number not found in the article, with an alias table and filters for capitalised common words.
+\item \textbf{Invented reactions.} A headline uses a reaction word (such as \emph{controversy}, \emph{backlash}, \emph{slams}, \emph{viral}) that does not appear in the article.
+\item \textbf{Off-article.} A headline shares no content word with the article.
+\item \textbf{NLI and LLM probe.} A separate, larger NLI model (DeBERTa-v3-large) and OLMo-2-7B-Instruct \citep{olmo2025olmo2} asked whether the headline adds facts not in the article.
+\item \textbf{Reference labels.} Labelled by an LLM and reviewed by the author: 100 headlines, 25 each from the untrained writer and from the seed-0 run of each reward, half of them flagged by the entity check. The source is hidden. Each is labelled faithful, fabricated, exaggerated, teaser or other (Appendix~\ref{app:labels}). We also marked 60 headlines from training checkpoints for invented reactions, other invented facts and the viral-story form (Table~\ref{tab:intermediate}).
+\end{itemize}
+
+\subsection{Pre-registration}\label{sec:prereg}
+Before any data were built, we fixed two gates for a short pilot: click-predictor accuracy and a minimum reward gain after 50 steps. We also fixed four hypotheses on test articles. Fabrication rises under the click predictor (H1) and under the simulated audience (H2), where a rise must appear on the entity check and agree in sign with the invented-numbers check and the LLM probe. The two differ at equal KL to the untrained writer (H3). The faithfulness penalty keeps at least half of the click-predictor gain without raising fabrication by more than one point (H4). A fifth criterion (M1) required the entity check to reach precision 0.7 and recall 0.6 against the reference labels. Thresholds were chosen on selection data (for NLI, on the first 50 reference labels), and each hypothesis was tested once on test outputs. Differences are reported in percentage points with 95\% intervals from a bootstrap that resamples articles (2,000 resamples), and we correct H1--H3 for multiple comparisons with Holm's method. Other results are exploratory. Appendix~\ref{app:prereg} lists every criterion, its outcome and three dated addenda.

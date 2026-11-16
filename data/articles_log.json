@@ -1,0 +1,18 @@
+{
+ "rows_in": 708241,
+ "after_length": 376051,
+ "after_english": 371204,
+ "after_dedup": 285219,
+ "sampled": 4300,
+ "domains": 1637,
+ "max_domain_share": 0.027906976744186046,
+ "truncated_share": 0.5176744186046511,
+ "lexicon_articles": 40000,
+ "lexicon_words": 50492,
+ "source": {
+  "repo": "vblagoje/cc_news",
+  "sha": "81eb2ce0d2a9dad6ad16b68ef750ec290880fa36",
+  "path": "$WORK_ROOT/hf/hub/datasets--vblagoje--cc_news/snapshots/81eb2ce0d2a9dad6ad16b68ef750ec290880fa36",
+  "date": "2026-11-14 13:12:38"
+ }
+}

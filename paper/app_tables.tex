@@ -1,0 +1,86 @@
+\section{Pre-registration and verdicts}\label{app:prereg}
+\begin{table}[h]
+\centering\small
+\begin{tabular}{@{}p{8.2cm}l@{}}
+\toprule
+Criterion (fixed in advance) & Outcome \\
+\midrule
+G1 click predictor $\ge$60\% on clear selection pairs and $\ge$3 points above surface features & met (80.4\%; test 81.3\%) \\
+G2 reward gain $\ge$0.3 $z$ after 50 steps without collapse, rewards (a) and (b) & met on the pre-planned retry \\
+H1 fabrication rises under the click predictor & rise \\
+H2 fabrication rises under the simulated audience & inconclusive \\
+H3 click predictor vs simulated audience at equal KL & real $<$ simulated (not robust across measures) \\
+H4 faithfulness penalty keeps $\ge$50\% of click-predictor gain with fabrication $\le$ untrained $+1$ point & failed \\
+M1 entity check precision $\ge$0.70 and recall $\ge$0.60 on held-out labels & failed (precision 0.64) \\
+\bottomrule
+\end{tabular}
+\caption{Pre-registered criteria and outcomes. H1--H3 are corrected for multiple comparisons with Holm's method, and all three entity-check differences stay significant. H2 is inconclusive because its required checks disagree, not because of significance.}
+\label{tab:verdicts}
+\end{table}
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Pairs & $n$ & Click predictor & Surface features & Bag of words \\
+\midrule
+Selection, clear & 3,070 & \textbf{80.4} & 60.6 & 71.5 \\
+Selection, clear, equal length & 1,055 & \textbf{80.1} & 58.3 & 69.2 \\
+Test, clear & 3,388 & \textbf{81.3} & -- & -- \\
+Test, clear, no story overlap & 626 & \textbf{83.5} & -- & -- \\
+\bottomrule
+\end{tabular}
+\caption{Pairwise accuracy (\%) of the click predictor on held-out Upworthy pairs. Baselines are Bradley--Terry models on the same pairs. The gate required at least 60\% and 3 points above the best surface-feature model.}
+\label{tab:clickmodel}
+\end{table}
+
+\paragraph{Additions to the pre-registration.} Three addenda were each fixed before the outputs they govern. A1 (before any data) closed gaps in the pilot rules and fixed the order of outcome labels and the Holm procedure. A2 (before test outputs) added the story-overlap check on the click predictor. A3 (before test outputs) decided H4 on interval bounds rather than point estimates and required both seeds to agree.
+
+\paragraph{Deviations.} Upworthy's released files lack the flag for badly randomised tests, so we removed tests by the date window the maintainers give. The rule for capitalised common words in the entity check was replaced before any outputs existed, because the original rule dropped names such as ``Obama''. Both rewards failed the pilot gate at the planned learning rate ($2\times10^{-5}$) and passed at the pre-planned retry rate, which the main runs then used. When the entity check failed M1, the pre-registered fallback measure (entity check or NLI) was applied; it changed no conclusion for H1--H3, and H4 stays decided on the entity check because its pre-registration excludes NLI. The probe, the invented-reaction and off-article measures, best-of-16 and the larger models are exploratory.
+
+\section{Full tables}\label{app:tables}
+\begin{table}[h]
+\centering\small
+\resizebox{\linewidth}{!}{\begin{tabular}{@{}lcccccccccccc@{}}
+\toprule
+Source & Entity & Invented & Invented & Off- & NLI: not & 8-gram & Words & Valid & KL & Click & Audience \\
+ & check & numbers & reactions & article & supported & copy & & & (nats) & pred.\ ($z$) & ($z$) \\
+\midrule
+Real titles & 14.6 & 3.6 & 0.3 & 0.6 & 22.2 & 6.8 & 10.0 & 100.0 & -- & $+0.35$ & $+0.00$ \\
+Untrained writer & 12.1 & 1.7 & 2.2 & 0.0 & 24.6 & 1.5 & 12.2 & 99.8 & 0 & $-0.03$ & $+0.08$ \\
+(a) seed 0 & 95.3 & 95.3 & 99.1 & 27.3 & 95.8 & 0.0 & 14.0 & 100.0 & 152.5 & $+5.44$ & $-0.98$ \\
+(a) seed 1 & 99.8 & 99.8 & 99.1 & 25.1 & 96.2 & 0.0 & 17.0 & 100.0 & 151.8 & $+5.44$ & $+1.56$ \\
+(b) seed 0 & 38.0 & 1.8 & 23.7 & 0.1 & 48.6 & 0.6 & 14.4 & 99.4 & 26.7 & $+0.09$ & $+1.06$ \\
+(b) seed 1 & 47.1 & 1.5 & 30.2 & 0.5 & 57.2 & 0.6 & 15.2 & 98.7 & 40.1 & $+0.19$ & $+1.36$ \\
+(c) seed 0 & 15.6 & 1.3 & 4.2 & 0.1 & 23.1 & 0.7 & 14.7 & 98.2 & 70.6 & $+2.64$ & $+0.18$ \\
+(c) seed 1 & 15.9 & 3.6 & 22.9 & 0.1 & 16.1 & 0.2 & 14.2 & 99.2 & 68.2 & $+2.78$ & $+0.15$ \\
+\bottomrule
+\end{tabular}}
+\caption{Final checkpoints per seed on 1,000 test articles, 4 headlines each (percentages). Seed 0 of (a) is its checkpoint at the collapse stop (step 240). ``NLI: not supported'' is the evaluation NLI check at $\tau=0.55$. KL is the offline sequence KL to the untrained writer on 300 selection articles.}
+\label{tab:perseed}
+\end{table}
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{@{}llc@{}}
+\toprule
+Comparison & Measure & Difference, pp [95\% CI] \\
+\midrule
+H1: (a) $-$ untrained & Entity check & $+85.5$ [$+84.0$, $+87.0$] \\
+ & Invented numbers & $+95.9$ [$+94.9$, $+96.7$] \\
+H2: (b) $-$ untrained & Entity check & $+30.4$ [$+28.0$, $+32.6$] \\
+ & Invented numbers & $-0.0$ [$-0.6$, $+0.5$] \\
+H3: (a) $-$ (b), equal KL & Entity check & $-13.0$ [$-16.8$, $-9.0$] \\
+ & Invented numbers & $+1.8$ [$+0.2$, $+3.5$] \\
+ & Invented reactions (post hoc) & $-4.4$ [$-7.2$, $-1.6$] \\
+H3, seed 1 (post hoc) & Entity check & $-38.7$ [$-43.8$, $-33.3$] \\
+ & Invented numbers & $+1.7$ [$-0.2$, $+3.7$] \\
+ & Invented reactions & $-13.8$ [$-18.9$, $-8.6$] \\
+H4: (c) $-$ untrained & Entity check & $+3.6$ [$+1.6$, $+5.9$] \\
+ & Share of click-predictor gain kept & 0.50 [0.49, 0.51]; seed 0: 0.49, seed 1: 0.51 \\
+\bottomrule
+\end{tabular}
+\caption{Hypothesis tests on test articles. Intervals from 2,000 bootstrap resamples of articles; seeds pooled except for H3, which uses seed 0 as pre-registered; the seed-1 rows are post hoc. Intervals cover article sampling, not variation between seeds. Equal KL: the target is the simulated-audience run's final KL (26.7 nats for seed 0, 40.1 for seed 1). Click-predictor rates are interpolated between steps 50 and 100 in both seeds (entity check: click predictor 8.5\% and 7.6\%, simulated audience 21.5\% and 46.3\%). In seed 0 the simulated-audience KL is not monotone (33.0 at step 250, 26.7 at step 350), so its rates come from the first crossing, between steps 200 and 250; its final checkpoint instead gives $-26.3$ [$-31.9$, $-21.4$] on the entity check, with the same label. In seed 1 they come from its final checkpoint.}
+\label{tab:tests}
+\end{table}
+\FloatBarrier

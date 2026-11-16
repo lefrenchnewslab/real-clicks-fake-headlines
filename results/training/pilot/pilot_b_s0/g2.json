@@ -1,0 +1,48 @@
+{
+ "arm": "b",
+ "adapter": "$WORK_ROOT/rlhead/runs/grpo/pilot_b_s0/checkpoint-50",
+ "base_reward": -0.0049999999999998535,
+ "adapter_reward": 0.07164866222814374,
+ "gain": 0.0766486622281436,
+ "adapter_valid": 0.9983333333333333,
+ "base_valid": 0.9983333333333333,
+ "adapter_distinct_per_article_of2": 1.98,
+ "base_reward_validonly": 1.467940960773162e-16,
+ "adapter_reward_validonly": 0.07677662326692195,
+ "examples": [
+  "Shelterbox Fails to Report Sexual Misconduct Allegations for Years, Charity Under Fire",
+  "Shelterbox Fails to Report Sexual Misconduct Incidents for Years, Charity Commission Investigates",
+  "Scott Stapp Reflects on Scott Weiland's Death and Its Impact on His Recovery Efforts",
+  "Scott Stapp Reflects on Scott Weiland's Death and Its Impact on His Recovery Efforts",
+  "Car Crash Leaves One Vehicle on Top of Another Near Dundee City Centre",
+  "Car Crash Involving Multiple Vehicles Leaves One Hospitalized in Dundee",
+  "Key Takeaways: Saints' Success Despite Faults, Focus on Defense Required for Hull FC",
+  "Key Takeaways from Saints' Two Losses Highlight Need for Stronger Defense in Hull FC's Match",
+  "LG OLED Displays Set to Surprise Again: Google's New Pixels May Face Display Issues",
+  "LG OLED Displays May Spell Trouble for New Pixel Models: Nasty Surprise Ahead",
+  "Young Butte Weightlifter Riley Gelling Overcomes Bone Disease to Compete in National Olympics",
+  "Young Butte Weightlifter Overcomes Bone Disease to Compete in National Olympics"
+ ],
+ "zstats": {
+  "rm": {
+   "mean": -3.2443456379121454,
+   "sd": 1.3713089395297544
+  },
+  "judge": {
+   "mean": 0.3457164964356496,
+   "sd": 0.3390954376275894
+  },
+  "n_valid": 599,
+  "n": 600,
+  "source": "runs/gen/base_selection_t07.parquet (valid only)",
+  "judge_min": 3.923825864227126e-08,
+  "judge_max": 0.9992402195930481,
+  "judge_q": [
+   0.00023572235455731063,
+   0.020227547035119642,
+   0.23281003017291368,
+   0.6372276252950542,
+   0.9669774115085602
+  ]
+ }
+}

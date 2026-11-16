@@ -1,0 +1,2 @@
+$PY -u analyze.py
+$PY -u pipeline_fig.py

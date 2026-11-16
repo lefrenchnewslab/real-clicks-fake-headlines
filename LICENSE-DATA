@@ -1,0 +1,25 @@
+Data and documents licence
+
+The model outputs (results/), labels (labels/), numbers files (*.json, *.csv at the top level), figures (figs/),
+documentation (docs/, README.md), data files written by our scripts (data/) and the paper (paper.pdf, paper/) in this
+repository are licensed under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+
+Copyright (c) 2026 Amr Sobhy, Le French News Lab
+
+You are free to share and adapt this material for any purpose, provided you give appropriate credit, link to the
+licence and indicate if changes were made. Full licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Third-party data
+- data/pairs_train.parquet, data/pairs_selection.parquet, data/pairs_test.parquet contain headline pairs derived from the
+  Upworthy Research Archive (J. Nathan Matias, Kevin Munger, Marianne Aubin Le Quere and Charles Ebersole, "The Upworthy
+  Research Archive, a time series of 32,487 experiments in U.S. media", Scientific Data 8, 195 (2021),
+  https://doi.org/10.1038/s41597-021-00934-7; data at https://osf.io/jd64p/), licensed CC BY 4.0. Our changes: tests
+  in the maintainers' date window for unreliable randomisation removed, within-test pairs of headlines with the same
+  image built, click-rate z-scores added (scripts/build_pairs.py).
+- News articles come from the cc_news dataset (Hugging Face vblagoje/cc_news, built with news-please). Their text and
+  titles are NOT redistributed here: data/ only lists our article ids, split, domain, date and SHA-256 hashes, and
+  results/final/final_human.parquet carries no title text. scripts/build_articles.py rebuilds the articles from the public
+  dataset; the cc_news licence on the dataset card is "unknown", so check it before redistributing rebuilt text.
+
+The code (scripts/, reproduce.py, paper/make_fig_stages.py) is licensed separately under the MIT licence (see LICENSE).
+The models used keep their own licences.

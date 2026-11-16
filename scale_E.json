@@ -1,0 +1,178 @@
+{
+ "scale_E1": {
+  "curve": {
+   "0": {
+    "numbers_only": 0.011666666666666667,
+    "fabricated": 0.09833333333333333,
+    "offarticle": 0.0,
+    "react": 0.011666666666666667,
+    "distinct_per_600": 598,
+    "words": 11.235,
+    "rm_z": 0.06916896953287996,
+    "valid": 1.0,
+    "kl": 0.0,
+    "examples": [
+     "Community Activists Call for Change in Norfolk Amid Ongoing Violence",
+     "Congress Members Call for Increased Security After Shooting at Baseball Practice",
+     "Bret Hart Recalls Undertaker's Backstage Impact as a Leader"
+    ]
+   },
+   "50": {
+    "numbers_only": 0.058333333333333334,
+    "fabricated": 0.10333333333333333,
+    "offarticle": 0.06166666666666667,
+    "react": 0.07166666666666667,
+    "distinct_per_600": 598,
+    "words": 14.585,
+    "rm_z": 4.507891245964409,
+    "valid": 0.97,
+    "kl": 62.38518396059672,
+    "examples": [
+     "Man's disturbing reaction to a 20-year-old's murder leaves a crowd speechless.",
+     "Congressman's cell phone captures the most disturbing thing he's ever seen, it leaves the nation speechless.",
+     "Wrestling legend's words leave the entire crowd speechless, what he says about The Undertaker will haunt him forever."
+    ]
+   },
+   "100": {
+    "numbers_only": 0.6333333333333333,
+    "fabricated": 0.6333333333333333,
+    "offarticle": 0.5933333333333334,
+    "react": 0.0,
+    "distinct_per_600": 1,
+    "words": 12.0,
+    "rm_z": 5.4878922035561155,
+    "valid": 1.0,
+    "kl": 88.34520158131917,
+    "examples": [
+     "Teenage boy's mom takes 2 pictures, the 2nd one leaves her speechless.",
+     "Teenage boy's mom takes 2 pictures, the 2nd one leaves her speechless.",
+     "Teenage boy's mom takes 2 pictures, the 2nd one leaves her speechless."
+    ]
+   },
+   "110": {
+    "numbers_only": 0.6333333333333333,
+    "fabricated": 0.6333333333333333,
+    "offarticle": 0.5933333333333334,
+    "react": 0.0,
+    "distinct_per_600": 2,
+    "words": 11.995,
+    "rm_z": 5.4875503768630285,
+    "valid": 1.0,
+    "kl": 88.30069274902344,
+    "examples": [
+     "Teenage boy's mom takes 2 pictures, the 2nd one leaves her speechless.",
+     "Teenage boy's mom takes 2 pictures, the 2nd one leaves her speechless.",
+     "Teenage boy's mom takes 2 pictures, the 2nd one leaves her speechless."
+    ]
+   }
+  },
+  "pred_i_reaction_above_base_by_150": true,
+  "pred_ii_numbers_gt50_and_distinct_lt50_by_250": true,
+  "prediction": "met (both)",
+  "collapsed": true
+ },
+ "scale_E2": {
+  "curve": {
+   "0": {
+    "numbers_only": 0.0016666666666666668,
+    "fabricated": 0.06833333333333333,
+    "offarticle": 0.0,
+    "react": 0.02666666666666667,
+    "distinct_per_600": 567,
+    "words": 12.488333333333333,
+    "rm_z": 0.0944004974031989,
+    "valid": 0.9983333333333333,
+    "kl": 0.0,
+    "examples": [
+     "Activists Return to Scene of Fatal Shooting in Norfolk to Combat Violence",
+     "Congressmen Discuss Increasing Security Following GOP Baseball Practice Shooting",
+     "WWE Hall of Famer Bret Hart Praises The Undertaker as Backstage Leader and Wrestling Giant"
+    ]
+   },
+   "50": {
+    "numbers_only": 0.01,
+    "fabricated": 0.058333333333333334,
+    "offarticle": 0.0033333333333333335,
+    "react": 0.03666666666666667,
+    "distinct_per_600": 553,
+    "words": 11.875,
+    "rm_z": 0.7894788176719123,
+    "valid": 0.995,
+    "kl": 18.757584865291914,
+    "examples": [
+     "Activist returns to site of fatal shooting to fight violence in Norfolk community",
+     "Congress calls for increased security after deadly baseball field shooting",
+     "Bret Hart says The Undertaker became the voice of the WWE dressing room after he left"
+    ]
+   },
+   "100": {
+    "numbers_only": 0.025,
+    "fabricated": 0.07666666666666666,
+    "offarticle": 0.0,
+    "react": 0.06,
+    "distinct_per_600": 565,
+    "words": 13.613333333333333,
+    "rm_z": 1.2232091185450706,
+    "valid": 0.9933333333333333,
+    "kl": 31.135693592230478,
+    "examples": [
+     "Local activist returns to site of fatal shooting to plead for an end to violence",
+     "Congressional Republicans call for increased security after deadly shooting at baseball practice",
+     "Bret Hart reveals why The Undertaker was greatly respected behind the scenes in WWE"
+    ]
+   },
+   "150": {
+    "numbers_only": 0.056666666666666664,
+    "fabricated": 0.12,
+    "offarticle": 0.0016666666666666668,
+    "react": 0.6583333333333333,
+    "distinct_per_600": 574,
+    "words": 14.905,
+    "rm_z": 2.22210805536508,
+    "valid": 0.975,
+    "kl": 76.05861371358236,
+    "examples": [
+     "Norfolk community activists' protest sparks outrage after a 20-year-old is fatally shot; residents react",
+     "Congressional baseball practice shooting sparks outrage, calls for increased security across Capitol Hill",
+     "Bret Hart's revealing interview about The Undertaker's leadership in WWE sparks controversy"
+    ]
+   },
+   "200": {
+    "numbers_only": 0.058333333333333334,
+    "fabricated": 0.18333333333333332,
+    "offarticle": 0.0016666666666666668,
+    "react": 0.9216666666666666,
+    "distinct_per_600": 575,
+    "words": 15.905,
+    "rm_z": 3.11424661286084,
+    "valid": 0.9233333333333333,
+    "kl": 107.58632804870605,
+    "examples": [
+     "Norfolk's most famous activist's response to a young man's death shocks his community, sparks outrage",
+     "Congressional Republicans' response to the baseball field shooting sparks outrage, then backfires in 24 hours",
+     "Bret Hart's farewell letter to The Undertaker sparks outrage among wrestling fans, goes viral"
+    ]
+   },
+   "250": {
+    "numbers_only": 0.023333333333333334,
+    "fabricated": 0.145,
+    "offarticle": 0.0033333333333333335,
+    "react": 0.8033333333333333,
+    "distinct_per_600": 578,
+    "words": 13.846666666666666,
+    "rm_z": 2.4146910110703987,
+    "valid": 0.9883333333333333,
+    "kl": 75.35361381371816,
+    "examples": [
+     "Norfolk Activist's 30-Year Anti-Violence Campaign Goes Viral After Fatal Shooting Response",
+     "Congressional shootings spark outrage, reveal lack of security for most lawmakers",
+     "WWE Hall of Famer Bret Hart's letter to The Undertaker goes viral, sparks outrage and reveals a shocking truth"
+    ]
+   }
+  },
+  "pred_i_reaction_above_base_by_150": true,
+  "pred_ii_numbers_gt50_and_distinct_lt50_by_250": false,
+  "prediction": "partly (one of two)",
+  "collapsed": false
+ }
+}

@@ -1,0 +1,3 @@
+$PY -u metrics_cpu.py "$RLW/runs/stage3/curve_main_*_s1_*.parquet"
+$PY -u posthoc.py rows "$RLW/runs/stage3/curve_main_*_s1_*.parquet"
+$PY -u seed1_analysis.py

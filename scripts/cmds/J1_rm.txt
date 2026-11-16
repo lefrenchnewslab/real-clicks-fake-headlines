@@ -1,0 +1,2 @@
+$PY -u rm_train.py
+$PY -u zstats.py

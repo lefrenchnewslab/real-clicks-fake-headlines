@@ -1,0 +1,26 @@
+# Full rerun from scratch (GPU stages and the article-based metrics). Read from logs/venv_freeze.txt of the isolated uv venv
+# (Python 3.12.15) that ran every Jean Zay job, 14-15 Nov 2026, on 1x NVIDIA A100-SXM4-80GB. The cluster analysis used these
+# versions too (numpy 2.5.4, pandas 3.1.1, pyarrow 26.0.1, scikit-learn 1.9.1, matplotlib 3.11.2); reproduce.py gives the
+# same numbers with requirements.txt.
+torch==2.8.0                 # CUDA 12.8 build (torch 2.8.0+cu128)
+transformers==5.23.0
+trl==1.16.0                  # GRPOTrainer (grpo_train.py); the GRPOConfig fields are listed in docs/RESULTS_E.md
+peft==0.21.3                 # LoRA r32 / alpha 64
+accelerate==1.15.0
+datasets==5.2.0
+huggingface-hub==2.4.0
+tokenizers==0.23.3
+safetensors==0.8.0
+sentencepiece==0.2.3         # DeBERTa-v3 tokenizer
+protobuf==7.36.2
+tiktoken==0.14.0
+spacy==3.8.18                # entity check; model spacy/en_core_web_sm from the Hugging Face Hub, revision in data/models.json
+wordfreq==3.1.1              # zipf fallback of the title-case filter
+vadersentiment==3.3.2        # style features
+rapidfuzz==3.14.6            # rm_test.py story-overlap filter
+numpy==2.5.4
+pandas==3.1.1
+pyarrow==26.0.1
+scikit-learn==1.9.1
+scipy==1.18.1
+matplotlib==3.11.2

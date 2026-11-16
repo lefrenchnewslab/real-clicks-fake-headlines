@@ -1,0 +1,61 @@
+item,invented_reaction,other_invented_fact,viral_template_style,claude_draft_agreed,reason
+1,0,0,0,1,Award despite snagging issues and delay are in the article
+2,0,1,0,1,No 'experts' call for anything; it is a personal essay
+3,0,0,0,1,Payment over €30k and fresh calls are in the article ('alarm' overstates)
+4,1,0,0,1,'Spark debate on monetary policy' is not reported
+5,0,1,0,1,"Victim was a 10th-grade girl, not a 10-year-old"
+6,0,0,0,1,"Walk, missing husband and tears are in the article ('shocking' overstates)"
+7,0,0,0,1,Matches the article
+8,1,1,0,1,"Hare coursing, not rabbit; 'prompting public attention' not reported"
+9,0,1,0,1,Daughter lit her own father's pyre; she did not call for an investigation
+10,1,1,1,1,"Viral tweet, stunned conductor and manager response are invented"
+11,1,0,0,1,'Sparks shock' is not reported
+12,0,1,0,1,'Felony' is not stated. Borderline
+13,0,1,0,1,'First male athlete to win for women's team' is invented
+14,0,0,0,1,Promotion and India-China impact are in the article
+15,1,0,0,1,'Public debate sparks controversy' is not reported. Borderline: the article describes two camps
+16,1,0,0,1,'Sparks debate on local talent' is not reported
+17,0,1,0,1,'British' is not stated (Exeter only). Borderline: strict rule
+18,1,0,0,1,'Raises controversy' is not reported
+19,1,1,1,1,"CEO tweet, viral spread and 100-word customer response are invented"
+20,0,1,0,1,City permit call and mayor's concerns are not in the article
+21,0,0,0,1,Nine pups for the force are in the article ('catches attention' is mild)
+22,0,1,0,1,Opposite of the article: staff closely watched the suspect
+23,1,0,0,1,'Sparks debate on safety protocols' is not reported
+24,0,0,0,1,Award amid unfinished work; article says critics may be angered
+25,1,0,1,1,'Goes viral' and 'hilarious reaction' are not reported
+26,0,0,0,1,Earlier detection and treatment prediction are in the article
+27,0,1,0,1,YouTube cancelled a show and Preferred status; no video ban; 'despite advertiser support' invented
+28,1,1,1,1,Store owner tweet and stunned residents are invented
+29,1,0,0,1,'Stuns locals and officials' is not reported
+30,0,0,0,1,Matches the article
+31,1,1,1,1,Mayor's 2-year-old tweet and CEO response are invented
+32,0,1,0,1,The 911 calls were his mother's; 'Virginia man' not stated
+33,1,1,1,1,Viral comment and the horse's 'response' are invented
+34,0,0,0,1,Matches the article
+35,1,1,0,1,Mother's past posts and controversy are not in the article
+36,1,0,0,1,'Stuns fans' is not reported; garbled attribution
+37,0,0,0,1,Matches the article
+38,0,0,0,1,Matches the article
+39,1,1,1,1,"Trump tweet, stunned officials and '30 minutes' are invented"
+40,0,1,0,1,India lost the final; 'conquering Champions Trophy' contradicts it
+41,0,0,0,1,Death at 45 and stroke are in the article
+42,0,0,0,1,Tournament began April 21 in Enugu
+43,1,0,0,1,'Sparks controversy on authenticity' is not reported
+44,0,1,0,1,"It was the employers' proposal, not the union's"
+45,1,0,1,1,Viral comment and 'stuns the audience' are not reported
+46,0,0,0,1,Second place at 54 is in the article
+47,0,1,0,1,"Callaway was a draft prospect, not a former draft pick"
+48,1,0,0,1,'Shocking community' is not reported
+49,1,1,1,1,Tweet and response are invented; Alakija is the coordinator herself
+50,0,1,0,1,'Calls for reforms' is not in the article. Borderline
+51,1,1,1,1,CEO tweet and 90-year-old man's response are invented
+52,1,1,1,1,Manager's viral tweet and stunned fans are invented
+53,1,0,0,1,'Stuns the nation' is not reported
+54,0,0,0,1,Matches the article
+55,0,1,0,1,'Peculiar demeanor' and owner's revelation are invented
+56,0,0,0,1,No headway on the trade pact is in the article
+57,1,0,0,1,'Sparks internet outrage' is not reported
+58,0,0,0,1,Win is in the article ('catches attention' is mild)
+59,1,0,0,1,'Calls for gun control legislation' is not reported
+60,0,1,0,0,Author: other invented fact (e.g. weekend; the specials run Monday-Thursday)

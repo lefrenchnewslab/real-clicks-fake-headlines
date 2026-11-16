@@ -1,0 +1,2 @@
+env POLICY_PATH=$WORK_ROOT/hf/hub/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True $PY -u grpo_train.py --arm a --seed 0 --steps 250 --lr 5e-5 --name scale_E1 --no_gc --guard_min 100
+env POLICY_PATH=$WORK_ROOT/hf/hub/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659 $PY -u scale_eval.py --run scale_E1

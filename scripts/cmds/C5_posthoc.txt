@@ -1,0 +1,2 @@
+$PY -u posthoc.py rows
+$PY -u posthoc.py stats

@@ -1,0 +1,48 @@
+{
+ "arm": "a",
+ "adapter": "$WORK_ROOT/rlhead/runs/grpo/pilot_a_s0_lr5e5/checkpoint-50",
+ "base_reward": -0.004999999999999929,
+ "adapter_reward": 0.47743411390495943,
+ "gain": 0.4824341139049594,
+ "adapter_valid": 0.9966666666666667,
+ "base_valid": 0.9983333333333333,
+ "adapter_distinct_per_article_of2": 1.9833333333333334,
+ "base_reward_validonly": 7.710396965677214e-17,
+ "adapter_reward_validonly": 0.4890643283327352,
+ "examples": [
+  "Shelterbox Under Fire After Failing to Report Alleged Sexual Misconduct for Years",
+  "Shelterbox Under Fire After Missing To Report Sexual Misconduct Allegations For Years",
+  "Former Weezer Lead Singer Opens Up About How Scott Weiland\u2019s Death Changed Him Forever",
+  "Former Weiland Bandmate Opens Up About How Late Frontman's Death Changed Him Forever",
+  "Dramatic Crash Sends Car Soaring onto Another Near Dundee's City Centre",
+  "Car Lands on Top of Another After Nighttime Crash Near Dundee City Centre, Man Charged with Careless Driving",
+  "ST Helens' Losses Show Ben Barba's Impact, Hull FC Warned to Focus on Defense",
+  "ST Helens' Tough Losses Highlight Importance of Strong Defense, Not Just Containing Ben Barba",
+  "Google's New Pixel 3 May Face Same OLED Display Issues As Previous Models, Report Claims",
+  "Google\u2019s New Pixel 3 May Ruin Its Stellar Image With Horrible Display: Report",
+  "12-Year-Old Olympian Shows Unbelievable Resilience After Severe Leg Injury",
+  "12-Year-Old Olympic Weightlifter Proves His Mettle After Terrifying Bone Injury"
+ ],
+ "zstats": {
+  "rm": {
+   "mean": -3.2443456379121454,
+   "sd": 1.3713089395297544
+  },
+  "judge": {
+   "mean": 0.3457164964356496,
+   "sd": 0.3390954376275894
+  },
+  "n_valid": 599,
+  "n": 600,
+  "source": "runs/gen/base_selection_t07.parquet (valid only)",
+  "judge_min": 3.923825864227126e-08,
+  "judge_max": 0.9992402195930481,
+  "judge_q": [
+   0.00023572235455731063,
+   0.020227547035119642,
+   0.23281003017291368,
+   0.6372276252950542,
+   0.9669774115085602
+  ]
+ }
+}

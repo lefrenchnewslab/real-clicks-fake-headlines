@@ -1,0 +1,2 @@
+$PY -u grpo_train.py --arm c --seed 1 --steps 350 --lr 5e-5 --name main_c_s1 --no_gc --guard_min 100
+$PY -u kl.py --run main_c_s1

@@ -1,0 +1,2 @@
+env POLICY_PATH=$HF_MODELS/Qwen/Qwen2.5-14B-Instruct PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True $PY -u grpo_train.py --arm a --seed 0 --steps 250 --lr 5e-5 --name scale_E2 --guard_min 100
+env POLICY_PATH=$HF_MODELS/Qwen/Qwen2.5-14B-Instruct $PY -u scale_eval.py --run scale_E2

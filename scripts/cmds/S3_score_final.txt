@@ -1,0 +1,1 @@
+$PY -u score_gpu.py $RLW/runs/stage3/final_human.parquet $RLW/runs/stage3/final_base.parquet $RLW/runs/stage3/final_main_a_s0.parquet $RLW/runs/stage3/final_main_a_s1.parquet $RLW/runs/stage3/final_main_b_s0.parquet $RLW/runs/stage3/final_main_b_s1.parquet $RLW/runs/stage3/final_main_c_s0.parquet $RLW/runs/stage3/final_main_c_s1.parquet

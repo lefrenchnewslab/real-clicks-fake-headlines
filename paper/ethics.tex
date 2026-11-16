@@ -1,0 +1,13 @@
+\section{Limitations and Dual-Use / Ethical Considerations}\label{app:limits}
+\paragraph{Limitations.}
+\begin{itemize}
+\item The main runs use one 3B model. In single exploratory runs, the 14B writer added invented reactions without collapsing within 250 steps, and the 8B writer collapsed faster than the 3B writer.
+\item The click predictor reflects one site's readers in 2013--15, and the articles come from 2017--19 news. Its scores on the real titles show this shift.
+\item The pre-registered comparison at equal KL uses seed 0; a post-hoc seed-1 repeat agrees in sign, but the sign depends on the measure.
+\item The 100 reference labels and the 60 labels from training checkpoints were drafted by an LLM and reviewed by the author, who changed one. They are not independent human ground truth. The checkpoint labels cover 12 headlines per checkpoint from seed 0 only, so their rates are rough.
+\item The click-predictor runs moved four to six times further from the untrained writer, in KL, than the simulated-audience runs. At equal KL the click-predictor writer had not yet produced the template, so the difference between rewards may partly reflect how far each reward pushed the writer. The two rewards also differ in range: standardised on the untrained writer, the simulated audience cannot exceed $+1.93\,z$ because it is a probability, while the click predictor's score has no ceiling (it reached $+5.44\,z$).
+\item The invented-reaction word list was written after we had seen outputs, so its rates are descriptive.
+\end{itemize}
+
+\paragraph{Dual use and ethics.}
+The study shows how a headline writer changes under RL training against a click predictor fitted to public A/B tests. It does not measure how real readers respond to the generated headlines, and no generated headline was published or shown to anyone outside the study. All data are public: the Upworthy Research Archive and cc\_news articles. No personal data were collected. We release the code, the click predictor, the generated test headlines and the final adapters of all six runs. The final click-predictor adapters mostly repeat one implausible story, so they offer little to anyone seeking convincing false headlines; we do not release intermediate checkpoints, whose fabricated headlines are more plausible. The failure modes we describe are already reachable by anyone who trains on engagement data. Our aim is to help such teams detect them and to show which checks miss them.

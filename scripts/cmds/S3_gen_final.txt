@@ -1,0 +1,2 @@
+$PY -u gen_stage3.py human
+$PY -u gen_stage3.py final --runs base,main_a_s0,main_a_s1,main_b_s0,main_b_s1,main_c_s0,main_c_s1

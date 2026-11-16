@@ -1,0 +1,44 @@
+{
+ "policy": {
+  "repo": "Qwen/Qwen2.5-3B-Instruct",
+  "sha": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "path": "$WORK_ROOT/hf/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "date": "2026-11-14 13:13:00"
+ },
+ "judge": {
+  "repo": "Qwen/Qwen2.5-7B-Instruct",
+  "sha": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "path": "$WORK_ROOT/hf/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+  "date": "2026-11-14 13:13:00"
+ },
+ "rm_backbone": {
+  "repo": "microsoft/deberta-v3-base",
+  "sha": "8ccc9b6f36199bec6961081d44eb72fb3f7353f3",
+  "path": "$WORK_ROOT/hf/hub/models--microsoft--deberta-v3-base/snapshots/8ccc9b6f36199bec6961081d44eb72fb3f7353f3",
+  "date": "2026-11-14 13:13:01"
+ },
+ "train_nli": {
+  "repo": "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli",
+  "sha": "6f5cf0a2b59cabb106aca4c287eed12e357e90eb",
+  "path": "$WORK_ROOT/hf/hub/models--MoritzLaurer--DeBERTa-v3-base-mnli-fever-anli/snapshots/6f5cf0a2b59cabb106aca4c287eed12e357e90eb",
+  "date": "2026-11-14 13:13:04"
+ },
+ "eval_nli": {
+  "repo": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+  "sha": "b3546ea6b0346eb6f8d5d68b13c7dc6d0376b3d7",
+  "path": "$WORK_ROOT/hf/hub/models--MoritzLaurer--DeBERTa-v3-large-mnli-fever-anli-ling-wanli/snapshots/b3546ea6b0346eb6f8d5d68b13c7dc6d0376b3d7",
+  "date": "2026-11-14 13:13:08"
+ },
+ "spacy": {
+  "repo": "spacy/en_core_web_sm",
+  "sha": "8fb6f8155286360bf5486fe399e2738d1df7ded2",
+  "path": "$WORK_ROOT/hf/hub/models--spacy--en_core_web_sm/snapshots/8fb6f8155286360bf5486fe399e2738d1df7ded2",
+  "date": "2026-11-14 13:13:10"
+ },
+ "probe": {
+  "repo": "allenai/OLMo-2-1124-7B-Instruct",
+  "sha": "470b1fba1ae01581f270116362ee4aa1b97f4c84",
+  "path": "$WORK_ROOT/hf/hub/models--allenai--OLMo-2-1124-7B-Instruct/snapshots/470b1fba1ae01581f270116362ee4aa1b97f4c84",
+  "date": "2026-11-14 13:13:10"
+ }
+}
