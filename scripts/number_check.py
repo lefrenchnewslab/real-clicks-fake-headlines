@@ -57,14 +57,8 @@ def sgn(v, d):   # LaTeX-style signed number as typed in the tables; a value tha
 
 # Known errors in the paper text, found by this check. A claim listed here is reported as ERRATUM (not hidden, not counted
 # as a pass); the printed total names them. Key: (where, source) as in the claim.
-ERRATA = {
-    ("Table 2 (final, pooled)", "arm_c_pooled.posthoc react"):
-        "typed 13.6; the pooled rate is 13.54% (per seed 4.175% and 22.9%), which rounds to 13.5. 13.6 is the mean of the already-rounded 4.2 and 22.9.",
-    ("Table 5 caption", "numbers_E.nli_tau == 0.55"):
-        "caption says tau = 0.55, but the column's values (22.2, 24.6, 95.8, ...) are the tau = 0.5 rates in numbers_E.json; the tau = 0.55 rates "
-        "(23.7, 26.8, 96.4, ...) are in numbers_E_switched.json. Either the caption or the column must change.",
-}
-TYPED = {("Table 2 (final, pooled)", "arm_c_pooled.posthoc react"): "13.6"}   # value as typed in the paper, so the row quote still matches
+ERRATA = {}
+TYPED = {}   # (where, source) -> value as typed in the paper, for a listed erratum, so the row quote still matches
 
 
 # ---------------- Abstract ----------------
@@ -185,7 +179,7 @@ for key, lab in LAB.items():
     cells = [(f"{pct(t['fabricated']):.1f}", "fabricated", pct(t["fabricated"])), (f"{pct(t['numbers_only']):.1f}", "numbers_only", pct(t["numbers_only"])),
              (f"{pct(P['per_source'][key]['react']):.1f}", "posthoc react", pct(P["per_source"][key]["react"])),
              (f"{pct(P['per_source'][key]['offarticle']):.1f}", "posthoc offarticle", pct(P["per_source"][key]["offarticle"])),
-             (f"{pct(t['nli_unsup']):.1f}", "numbers_E nli_unsup (tau 0.5; see erratum)", pct(t["nli_unsup"])), (f"{pct(t['copy8']):.1f}", "copy8", pct(t["copy8"])),
+             (f"{pct(t['nli_unsup']):.1f}", "numbers_E nli_unsup (tau 0.5)", pct(t["nli_unsup"])), (f"{pct(t['copy8']):.1f}", "copy8", pct(t["copy8"])),
              (f"{t['words']:.1f}", "words", t["words"]), (f"{pct(t['valid']):.1f}", "valid", pct(t["valid"])),
              (kl, "kl_final", None if key in ("human", "base") else N["kl_final"][key]),
              (f"${sgn(t['rm_z'], 2)}$", "rm_z", t["rm_z"]), (f"${sgn(t['judge_z'], 2)}$", "judge_z", t["judge_z"])]
@@ -193,7 +187,8 @@ for key, lab in LAB.items():
     for p, c, v in cells:
         if v is not None:
             add(W, row, p.strip("$").replace("+", ""), f"{key}.{c}", v)
-cond("Table 5 caption", r"``NLI: not supported'' is the evaluation NLI check at $\tau=0.55$", "0.55", "numbers_E.nli_tau == 0.55", N.get("nli_tau") == 0.55, N.get("nli_tau"))
+cond("Table 5 caption", r"``NLI: not supported'' is the evaluation NLI check at its default threshold $\tau=0.5$", "0.5", "numbers_E.nli_tau == 0.5", N.get("nli_tau") == 0.5, N.get("nli_tau"))
+cond("Table 5 caption", r"Appendix~\ref{app:labels} uses $\tau=0.55$, chosen on items 1--50", "0.55", "m1_E.eval_nli_tau == 0.55", M["eval_nli_tau"] == 0.55, M["eval_nli_tau"])
 add("Table 5 caption", r"Seed 0 of (a) is its checkpoint at the collapse stop (step 240)", "240", "trajectories.csv main_a_s0 last step",
     T[T.run == "main_a_s0"].step.max())
 add("Table 6 caption", r"(entity check: click predictor 8.5\% and 7.6\%", "8.5", "h3_matched_by_seed seed0.fabricated.a_rate", pct(H3S["seed0"]["fabricated"]["a_rate"]))
